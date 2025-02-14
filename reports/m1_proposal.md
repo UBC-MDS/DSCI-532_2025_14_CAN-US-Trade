@@ -8,6 +8,21 @@ date-format: "long"
 
 ## Motivation and Purpose
 
+### **Who are we**  
+
+We are a team of data scientists specializing in international economy and trade.  
+
+### **Target Audience**  
+
+Our primary users are **economic analysts and trade policy experts** who need to evaluate the impact of trade policies, such as tariffs, on Canadian industries and provinces. 
+Specifically, professionals in government agencies, research institutions, and trade organizations will benefit from **interactive visualizations** that convey intuitively complex trade data.
+
+### **Problem Statement**  
+
+The recent announcement of a **25% tariff on Canadian exports** has raised concerns about its potential economic consequences. Economic analysts must quickly assess 
+**which industries and provinces will be most affected, the magnitude of trade reductions, and the long-term economic risks**. 
+However, trade data is often scattered across multiple sources, making it difficult to derive practical insights efficiently.
+
 ## Description of the data
 
 ## Research questions and usage scenarios
