@@ -8,6 +8,33 @@ date-format: "long"
 
 ## Motivation and Purpose
 
+### **Who are we**  
+
+We are a team of data scientists specializing in international economy and trade.  
+
+### **Target Audience**  
+
+Our primary users are **economic analysts and trade policy experts** who need to evaluate the impact of trade policies, such as tariffs, on Canadian industries and provinces. 
+Specifically, professionals in government agencies, research institutions, and trade organizations will benefit from **interactive visualizations** that convey intuitively complex trade data.
+
+### **Problem Statement**  
+
+The recent announcement of a **25% tariff on Canadian exports** has raised concerns about its potential economic consequences. Economic analysts must quickly assess 
+**which industries and provinces will be most affected, the magnitude of trade reductions, and the long-term economic risks**. 
+However, trade data is often scattered across multiple sources, making it difficult to derive practical insights efficiently.
+
+### **How Our Dashboard Helps**  
+
+Our goal is to develop an interactive dashboard that visualizes trade relations between Canada (Specifically at the provincial level) and the United States. The informative dashboard 
+will help economic analysts explore historical trade trends, assess vulnerabilities, and simulate potential disruptions caused by tariffs.
+
+Our Trade Relations Dashboard solves this problem by consolidating **10 years of trade data into an intuitive and interactive platform**. Key features include:  
+✅ **Visualizing Canada-U.S. trade flows** via maps, treemaps, and time-series charts.  
+✅ **Comparing industry-specific vulnerabilities** with breakdowns by goods categories and export values.  
+✅ **Providing statistical trends** to support policymakers in making informed countermeasures.  
+
+With this dashboard, economic analysts can rapidly assess risks, generate insights, and propose effective trade strategies, ensuring Canada remains competitive in the face of evolving trade policies.
+
 ## Description of the data
 
 ## Research questions and usage scenarios
