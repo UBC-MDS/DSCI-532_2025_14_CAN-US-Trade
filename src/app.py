@@ -3,6 +3,7 @@ import dash_bootstrap_components as dbc
 
 # Initialize the app
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 # Layout
 app.layout = dbc.Container([
@@ -77,4 +78,4 @@ app.layout = dbc.Container([
 
 # Run the app
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.server.run()
