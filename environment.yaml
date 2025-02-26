@@ -3,6 +3,7 @@ channels:
     - conda-forge
     - defaults
 dependencies:
+    - python=3.11
     - ipykernel
     - altair-all
     - dash
@@ -15,6 +16,11 @@ dependencies:
     - r-shiny
     - r-languageserver
     - r-plotly
+    - geopandas  # Needed for geospatial operations
+    - pyproj  # Required for spatial projections
+    - pandas
+    - requests
+    - gunicorn  # Needed for Render deployment
     - pip
     - pip:
         - dash-vega-components
