@@ -33,7 +33,8 @@ tidy_data["VALUE"] *= 1e3
 wide_data = tidy_data.pivot_table(
     index=['YEAR', 'GEO', 'CATEGORY'], columns='TRADE', values='VALUE'
     ).reset_index()
-wide_data['Net trade'] = wide_data['Export'] - wide_data['Import']
+wide_data['Import'] = -wide_data['Import']
+wide_data['Net trade'] = wide_data['Export'] + wide_data['Import']
 
 complete_data = wide_data.melt(
     id_vars=['YEAR', 'GEO', 'CATEGORY'], value_vars=['Export', 'Import', 'Net trade'],
