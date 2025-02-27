@@ -99,7 +99,7 @@ app.layout = dbc.Container(fluid=True, children=[
                         html.Div(id="placeholder-2", className="border p-3", style={"height": "250px"})
                     ], width=6, className="p-2"),
                 ], className="mb-3")
-            ], style={"overflow-y": "auto", "height": "100vh", "margin-left": "300px"})
+            ], style={"height": "100vh", "margin-left": "300px"})
         ], width=10, className="px-2")
     ])
 ])
