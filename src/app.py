@@ -21,7 +21,7 @@ df["YEAR"] = pd.to_datetime(df["YEAR"]).dt.year
 
 # Extract unique values for dropdown options
 unique_years = sorted(df["YEAR"].unique(), reverse=True)  # Ensure descending order
-unique_provinces = sorted(df["GEO"].unique())  
+unique_provinces = ["Canada"] + sorted([geo for geo in df["GEO"].unique() if geo != "Canada"])
 unique_categories = sorted(df["CATEGORY"].dropna().unique())
 unique_trade_types = sorted(df["TRADE"].unique())  
 
