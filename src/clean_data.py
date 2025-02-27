@@ -26,7 +26,6 @@ new_col_names = {
 
 tidy_data = tidy_data.rename(new_col_names, axis=1)
 tidy_data = tidy_data[["YEAR", "GEO", "CATEGORY", "TRADE", "VALUE"]]
-tidy_data["YEAR"] = pd.to_datetime(tidy_data["YEAR"], format='%Y')
 tidy_data["CATEGORY"] = [each[:-6] if each != 'All sections' else each for each in tidy_data["CATEGORY"]]
 tidy_data["VALUE"] *= 1e3
 
