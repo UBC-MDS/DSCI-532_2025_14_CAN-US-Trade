@@ -155,4 +155,4 @@ def update_trend_graph(selected_province, selected_category):
     return trend_graph.to_dict(format="vega")
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.server.run(host='127.0.0.1', port='8888')
