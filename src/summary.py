@@ -41,15 +41,21 @@ def generate_summary(year=2024, geo_filter="Canada", category="All sections"):
 
 def format_large_number(value):
     """
-    Formats large numbers to display in millions (M) with commas.
-
+    Formats large numbers to display in millions (M) if >= 1M, otherwise in thousands (K).
+    
     Args:
         value (float): The number to format.
 
     Returns:
-        str: Formatted number string in millions (M).
+        str: Formatted number string.
     """
-    return f"CA$ {value/1e6:,.0f}M"
+    if value >= 1e6:
+        return f"CA$ {value / 1e6:,.0f}M"
+    elif value >= 1e3:
+        return f"CA$ {value / 1e3:,.0f}K"
+    else:
+        return f"CA$ {value:,.0f}"
+
 
 def create_summary_component(year=2024, geo_filter="Canada", category="All sections"):
     """
