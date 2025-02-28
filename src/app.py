@@ -5,6 +5,7 @@ from dash import dcc, html, Output, Input
 import dash_bootstrap_components as dbc
 import dash_vega_components as dvc
 
+
 # Import necessary functions based on the environment (local vs. Render)
 if "RENDER" in os.environ:
     from src.trade_map import create_trade_map
@@ -151,7 +152,6 @@ def update_trend_graph(selected_province, selected_category):
         create_trend_graph(
             geo_filter=selected_province, category=selected_category
         ).to_dict(format='vega'))
-
 
 if __name__ == '__main__':
     app.run_server(debug=True)
