@@ -9,4 +9,4 @@ geopandas==1.0.*
 pyproj==3.7.*
 requests==2.32.*
 vegafusion==2.0.*
-vl-convert-python==1.6.*
+vl-convert-python==1.7.*
