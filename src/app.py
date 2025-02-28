@@ -148,10 +148,11 @@ def update_summary(selected_year, selected_province, selected_category):
     Input("goods-dropdown", "value")
 )
 def update_trend_graph(selected_province, selected_category):
-    return (
-        create_trend_graph(
-            geo_filter=selected_province, category=selected_category
-        ).to_dict(format='vega'))
+    trend_graph = create_trend_graph(
+        geo_filter=selected_province, category=selected_category
+    )
+
+    return trend_graph.to_dict(format="vega")
 
 if __name__ == '__main__':
     app.run_server(debug=True)
