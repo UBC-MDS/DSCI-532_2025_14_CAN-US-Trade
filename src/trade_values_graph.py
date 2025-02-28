@@ -7,7 +7,7 @@ import altair as alt
 
 alt.data_transformers.enable('vegafusion')
 
-def create_trade_values_graph(FILTER_GEO='Canada', FILTER_CATEGORY = 'All sections'):
+def create_trade_values_graph(geo_filter='Canada', category = 'All sections'):
     DATA_FROM = "data/clean/clean.csv"
     data = pd.read_csv(DATA_FROM)
 
@@ -30,8 +30,8 @@ def create_trade_values_graph(FILTER_GEO='Canada', FILTER_CATEGORY = 'All sectio
         color=color,
         tooltip=tooltip
     ).transform_filter(
-        (alt.datum.GEO == FILTER_GEO) &
-        (alt.datum.CATEGORY == FILTER_CATEGORY) &
+        (alt.datum.GEO == geo_filter) &
+        (alt.datum.CATEGORY == category) &
         (alt.datum.TRADE != 'Net trade')
     )
 
@@ -41,8 +41,8 @@ def create_trade_values_graph(FILTER_GEO='Canada', FILTER_CATEGORY = 'All sectio
         color=color,
         tooltip=tooltip
     ).transform_filter(
-        (alt.datum.GEO == FILTER_GEO) &
-        (alt.datum.CATEGORY == FILTER_CATEGORY) &
+        (alt.datum.GEO == geo_filter) &
+        (alt.datum.CATEGORY == category) &
         (alt.datum.TRADE == 'Net trade')
     )
 
