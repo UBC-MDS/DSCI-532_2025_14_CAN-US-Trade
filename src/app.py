@@ -12,6 +12,7 @@ data = pd.read_csv(data_from)
 data.head()
 
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 def create_trend_graph(geo_filter='Canada', category = 'All sections'):
     DATA_FROM = "data/clean/clean.csv"
@@ -66,4 +67,4 @@ app.layout = dbc.Container([
 ])
 
 if __name__ == '__main__':
-    app.server.run(host='127.0.0.1', port='8888')
+    app.run_server()
