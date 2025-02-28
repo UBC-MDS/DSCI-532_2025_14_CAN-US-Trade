@@ -41,8 +41,7 @@ def create_trade_map(year, trade_type, category, geo_filter):
 
     # Filter data based on selections
     df = df[(df["YEAR"] == year) & (df["TRADE"] == trade_type)]
-    if category != "all sections":
-        df = df[df["CATEGORY"] == category]
+    df = df[df["CATEGORY"] == category]
 
     # Load Canadian provinces' geospatial data
     provinces = gpd.read_file(GEOJSON_URL)

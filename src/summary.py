@@ -5,7 +5,7 @@ import dash_bootstrap_components as dbc
 # File path for cleaned trade data
 CLEAN_DATA_PATH = "data/clean/clean.csv"
 
-def generate_summary(year=2014, geo_filter="Canada", category="All sections"):
+def generate_summary(year=2024, geo_filter="Canada", category="All sections"):
     """
     Generates a trade summary for a selected year, province/territory, and category.
 
@@ -20,17 +20,22 @@ def generate_summary(year=2014, geo_filter="Canada", category="All sections"):
     df = pd.read_csv(CLEAN_DATA_PATH)
     df["YEAR"] = pd.to_datetime(df["YEAR"]).dt.year  
 
-    # Filter data based on user selections
+    # Ensure correct filtering logic
     df = df[df["YEAR"] == year]
-    if geo_filter != "Canada":
+    if geo_filter == "Canada":
+        df = df[df["GEO"] == "Canada"]  # Exclude provinces
+    else:
         df = df[df["GEO"] == geo_filter]
-    if category != "All sections":
+
+    if category == "All sections":
+        df = df[df["CATEGORY"] == "All sections"]  # Exclude other categories
+    else:
         df = df[df["CATEGORY"] == category]
 
-    # Calculate trade statistics
-    exports = df[df["TRADE"] == "Export"]["VALUE"].sum()
-    imports = df[df["TRADE"] == "Import"]["VALUE"].sum()
-    net_trade = df[df["TRADE"] == "Net trade"]["VALUE"].sum()
+    # Fetch the correct trade values
+    exports = df[df["TRADE"] == "Export"]["VALUE"].values[0]
+    imports = df[df["TRADE"] == "Import"]["VALUE"].values[0]
+    net_trade = df[df["TRADE"] == "Net trade"]["VALUE"].values[0]
 
     return {"exports": exports, "imports": imports, "net_trade": net_trade}
 
@@ -46,7 +51,7 @@ def format_large_number(value):
     """
     return f"CA$ {value/1e6:,.0f}M"
 
-def create_summary_component(year=2014, geo_filter="Canada", category="All sections"):
+def create_summary_component(year=2024, geo_filter="Canada", category="All sections"):
     """
     Creates a summary component displaying trade statistics including 
     total exports, imports, net trade balance, and selected category.
