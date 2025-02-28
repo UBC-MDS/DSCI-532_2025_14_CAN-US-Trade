@@ -13,20 +13,23 @@ if "PROJ_LIB" not in os.environ:
 CLEAN_DATA_PATH = "data/clean/clean.csv"
 GEOJSON_URL = "https://naciscdn.org/naturalearth/50m/cultural/ne_50m_admin_1_states_provinces.zip"
 
-def create_trade_map(year=2014, trade_type="Export", category="All sections", geo_filter="Canada"):
+def create_trade_map(year, trade_type, category, geo_filter):
     """
-    Creates an Altair choropleth map of Canada showing trade data with hover highlighting.
+    Generates an Altair choropleth map of Canada showing trade data with hover highlighting.
 
     Args:
         year (int): The year to filter data.
-        trade_type (str): The trade type to filter data (e.g., 'Export', 'Import').
+        trade_type (str): The trade type to filter data (e.g., 'Export', 'Import', 'Net trade').
         category (str): The goods/services category to filter by (default: "All sections").
         geo_filter (str): "Canada" for full view or a province/territory name.
 
     Returns:
         alt.Chart: Altair choropleth map visualization.
     """
-    df = pd.read_csv(CLEAN_DATA_PATH, dtype={"YEAR": int}, parse_dates=["YEAR"], date_format="%Y")
+    df = pd.read_csv(CLEAN_DATA_PATH)
+    
+    # Convert YEAR to integer
+    df["YEAR"] = pd.to_datetime(df["YEAR"]).dt.year
 
     # Normalize province names for consistency
     df["GEO"] = df["GEO"].replace({"Quebec": "Québec"})  
@@ -37,9 +40,8 @@ def create_trade_map(year=2014, trade_type="Export", category="All sections", ge
     category = category.strip().lower()
 
     # Filter data based on selections
-    df = df[(df["YEAR"].dt.year == year) & (df["TRADE"] == trade_type)]
-    if category != "all sections":
-        df = df[df["CATEGORY"] == category]
+    df = df[(df["YEAR"] == year) & (df["TRADE"] == trade_type)]
+    df = df[df["CATEGORY"] == category]
 
     # Load Canadian provinces' geospatial data
     provinces = gpd.read_file(GEOJSON_URL)
@@ -99,4 +101,5 @@ def create_trade_map(year=2014, trade_type="Export", category="All sections", ge
             )
         )
     )
+
     return trade_map

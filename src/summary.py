@@ -5,7 +5,7 @@ import dash_bootstrap_components as dbc
 # File path for cleaned trade data
 CLEAN_DATA_PATH = "data/clean/clean.csv"
 
-def generate_summary(year=2014, geo_filter="Canada", category="All sections"):
+def generate_summary(year=2024, geo_filter="Canada", category="All sections"):
     """
     Generates a trade summary for a selected year, province/territory, and category.
 
@@ -17,42 +17,55 @@ def generate_summary(year=2014, geo_filter="Canada", category="All sections"):
     Returns:
         dict: A dictionary containing net trade balance, exports, and imports.
     """
-    df = pd.read_csv(CLEAN_DATA_PATH, dtype={"YEAR": int}, parse_dates=["YEAR"], date_format="%Y")
+    df = pd.read_csv(CLEAN_DATA_PATH)
+    df["YEAR"] = pd.to_datetime(df["YEAR"]).dt.year  
 
-    # Filter data based on user selections
-    df = df[df["YEAR"].dt.year == year]
-    if geo_filter != "Canada":
+    # Ensure correct filtering logic
+    df = df[df["YEAR"] == year]
+    if geo_filter == "Canada":
+        df = df[df["GEO"] == "Canada"]  # Exclude provinces
+    else:
         df = df[df["GEO"] == geo_filter]
-    if category != "All sections":
+
+    if category == "All sections":
+        df = df[df["CATEGORY"] == "All sections"]  # Exclude other categories
+    else:
         df = df[df["CATEGORY"] == category]
 
-    # Calculate trade statistics
-    exports = df[df["TRADE"] == "Export"]["VALUE"].sum()
-    imports = df[df["TRADE"] == "Import"]["VALUE"].sum()
-    net_trade = exports - imports
+    # Fetch the correct trade values
+    exports = df[df["TRADE"] == "Export"]["VALUE"].values[0]
+    imports = df[df["TRADE"] == "Import"]["VALUE"].values[0]
+    net_trade = df[df["TRADE"] == "Net trade"]["VALUE"].values[0]
 
     return {"exports": exports, "imports": imports, "net_trade": net_trade}
 
 def format_large_number(value):
     """
-    Formats large numbers to display in millions (M) with commas.
-
+    Formats large numbers to display in millions (M) if >= 1M, otherwise in thousands (K).
+    
     Args:
         value (float): The number to format.
 
     Returns:
-        str: Formatted number string in millions (M).
+        str: Formatted number string.
     """
-    return f"CA$ {value/1e6:,.0f}M"
+    if value >= 1e6:
+        return f"CA$ {value / 1e6:,.0f}M"
+    elif value >= 1e3:
+        return f"CA$ {value / 1e3:,.0f}K"
+    else:
+        return f"CA$ {value:,.0f}"
 
-def create_summary_component(year=2014, geo_filter="Canada", category="All sections"):
+
+def create_summary_component(year=2024, geo_filter="Canada", category="All sections"):
     """
-    Creates a summary component displaying trade statistics in a 2-row layout.
+    Creates a summary component displaying trade statistics including 
+    total exports, imports, net trade balance, and selected category.
 
     Args:
-        year (int): The selected year.
-        geo_filter (str): The selected province/territory or "Canada" for all.
-        category (str): The selected goods/services category.
+        year (int): Selected year.
+        geo_filter (str): Selected province/territory.
+        category (str): Selected goods/services category.
 
     Returns:
         html.Div: Dash component containing trade summary.
@@ -69,24 +82,21 @@ def create_summary_component(year=2014, geo_filter="Canada", category="All secti
         html.H2(geo_filter, className="text-center", style={"font-weight": "bold"}),
         html.H3(year, className="text-center text-primary", style={"font-weight": "bold"}),
 
-        # Category Section
+        # **New Category Card**
         dbc.Card([
             dbc.CardBody([
-                html.H5(category, className="text-center", style={"font-size": "18px"})
+                html.H5("Goods and Services", className="text-center", style={"font-weight": "bold"}),
+                html.H4(category, className="text-center", style={"font-size": "18px"})
             ])
-        ], className="mb-3", style={"border": "2px solid black"}),
+        ], className="mb-3", style={"border-radius": "10px"}),
 
         # **Net Trade Balance Card**
-        dbc.Row([
-            dbc.Col([
-                dbc.Card([
-                    dbc.CardBody([
-                        html.H5("Net Trade Balance", className="text-center", style={"font-weight": "bold"}),
-                        html.H2(net_trade, className="text-center", style={"color": "#007BFF", "font-weight": "bold"})
-                    ])
-                ], className="shadow-sm p-3 mb-3", style={"border-radius": "10px"})
-            ], width=12)  # Full width row
-        ]),
+        dbc.Card([
+            dbc.CardBody([
+                html.H5("Net Trade Balance", className="text-center", style={"font-weight": "bold"}),
+                html.H2(net_trade, className="text-center", style={"color": "#007BFF", "font-weight": "bold"})
+            ])
+        ], className="shadow-sm p-3 mb-3", style={"border-radius": "10px"}),
 
         # **Exports & Imports Cards**
         dbc.Row([
@@ -97,7 +107,7 @@ def create_summary_component(year=2014, geo_filter="Canada", category="All secti
                         html.H2(exports, className="text-center", style={"color": "#28A745", "font-weight": "bold"})
                     ])
                 ], className="shadow-sm p-3 mb-3", style={"border-radius": "10px"})
-            ], width=6),  # Half width
+            ], width=6),
 
             dbc.Col([
                 dbc.Card([
@@ -106,6 +116,6 @@ def create_summary_component(year=2014, geo_filter="Canada", category="All secti
                         html.H2(imports, className="text-center", style={"color": "#DC3545", "font-weight": "bold"})
                     ])
                 ], className="shadow-sm p-3 mb-3", style={"border-radius": "10px"})
-            ], width=6)  # Half width
+            ], width=6)
         ])
     ], fluid=True, className="p-3")
