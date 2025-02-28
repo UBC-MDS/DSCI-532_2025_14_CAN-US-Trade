@@ -3,14 +3,17 @@ import pandas as pd
 import dash
 from dash import dcc, html, Output, Input
 import dash_bootstrap_components as dbc
+import dash_vega_components as dvc
 
 # Import necessary functions based on the environment (local vs. Render)
 if "RENDER" in os.environ:
     from src.trade_map import create_trade_map
     from src.summary import create_summary_component
+    from src.trend_graph import create_trend_graph
 else:
     from trade_map import create_trade_map
     from summary import create_summary_component
+    from trend_graph import create_trend_graph
 
 # Load and process cleaned trade data
 CLEAN_DATA_PATH = "data/clean/clean.csv"
@@ -95,8 +98,8 @@ app.layout = dbc.Container(fluid=True, children=[
                     ], width=6, className="p-2"),
                     
                     dbc.Col([
-                        html.H4("Placeholder 2", className="text-center"),
-                        html.Div(id="placeholder-2", className="border p-3", style={"height": "250px"})
+                        html.H4("Trade values by year", className="text-center"),
+                        dvc.Vega(id="trend-graph", spec={})
                     ], width=6, className="p-2"),
                 ], className="mb-3")
             ], style={"height": "100vh", "margin-left": "300px"})
@@ -137,6 +140,18 @@ def update_summary(selected_year, selected_province, selected_category):
     Updates the trade summary based on selected filters.
     """
     return create_summary_component(year=selected_year, geo_filter=selected_province, category=selected_category)
+
+@app.callback(
+    Output("trend-graph", "spec"),
+    Input("province-dropdown", "value"),
+    Input("goods-dropdown", "value")
+)
+def update_trend_graph(selected_province, selected_category):
+    return (
+        create_trend_graph(
+            geo_filter=selected_province, category=selected_category
+        ).to_dict(format='vega'))
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)
