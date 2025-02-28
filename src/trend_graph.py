@@ -1,4 +1,4 @@
-# file: trade_values_graph.py
+# file: trend_graph.py
 # author: Danish Karlin Isa
 # date: 2025-02-26
 
@@ -7,7 +7,7 @@ import altair as alt
 
 alt.data_transformers.enable('vegafusion')
 
-def create_trade_values_graph(geo_filter='Canada', category = 'All sections'):
+def create_trend_graph(geo_filter='Canada', category = 'All sections'):
     DATA_FROM = "data/clean/clean.csv"
     data = pd.read_csv(DATA_FROM)
 
