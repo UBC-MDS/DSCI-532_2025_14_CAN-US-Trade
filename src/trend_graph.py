@@ -1,11 +1,6 @@
 # file: trend_graph.py
 # author: Danish Karlin Isa
 # date: 2025-02-26
-#alt.data_transformers.enable('vegafusion')
-
-# file: trend_graph.py
-# author: Danish Karlin Isa
-# date: 2025-02-26
 
 import pandas as pd
 import altair as alt
