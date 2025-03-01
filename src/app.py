@@ -3,15 +3,17 @@ import pandas as pd
 import dash
 from dash import dcc, html, Output, Input
 import dash_bootstrap_components as dbc
-import trend_graph  # Import the trend graph function
+ # Import the trend graph function
 
 # Import necessary functions based on the environment (local vs. Render)
 if "RENDER" in os.environ:
     from src.trade_map import create_trade_map
     from src.summary import create_summary_component
+    import trend_graph 
 else:
     from trade_map import create_trade_map
     from summary import create_summary_component
+    import trend_graph 
 
 # Load and process cleaned trade data
 CLEAN_DATA_PATH = "data/clean/clean.csv"
