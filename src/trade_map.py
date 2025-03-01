@@ -29,7 +29,7 @@ def create_trade_map(year, trade_type, category, geo_filter):
     df = pd.read_csv(CLEAN_DATA_PATH)
     
     # Convert YEAR to integer
-    df["YEAR"] = pd.to_datetime(df["YEAR"]).dt.year
+    #df["YEAR"] = pd.to_datetime(df["YEAR"]).dt.year
 
     # Normalize province names for consistency
     df["GEO"] = df["GEO"].replace({"Quebec": "Québec"})  
@@ -56,7 +56,10 @@ def create_trade_map(year, trade_type, category, geo_filter):
     merged = canadian_provinces.merge(df, left_on="name", right_on="GEO", how="left")
 
     # Handle missing values and log transform trade values
-    merged["VALUE"] = merged["VALUE"].fillna(1e-3)
+    if(trade_type == "Import"):
+        merged["VALUE"] = -1* merged["VALUE"].fillna(1e-3)
+    else:
+        merged["VALUE"] = merged["VALUE"].fillna(1e-3)
     merged = merged[merged["VALUE"] > 0]
     merged["LOG_VALUE"] = np.log10(merged["VALUE"])
 

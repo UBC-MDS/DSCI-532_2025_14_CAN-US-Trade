@@ -3,6 +3,7 @@ import pandas as pd
 import dash
 from dash import dcc, html, Output, Input
 import dash_bootstrap_components as dbc
+import trend_graph  # Import the trend graph function
 
 # Import necessary functions based on the environment (local vs. Render)
 if "RENDER" in os.environ:
@@ -17,7 +18,7 @@ CLEAN_DATA_PATH = "data/clean/clean.csv"
 df = pd.read_csv(CLEAN_DATA_PATH)
 
 # Convert YEAR column to integers (extract year)
-df["YEAR"] = pd.to_datetime(df["YEAR"]).dt.year  
+#df["YEAR"] = pd.to_datetime(df["YEAR"]).dt.year  
 
 # Extract unique values for dropdown options
 unique_years = sorted(df["YEAR"].unique(), reverse=True)  # Ensure descending order
@@ -95,8 +96,8 @@ app.layout = dbc.Container(fluid=True, children=[
                     ], width=6, className="p-2"),
                     
                     dbc.Col([
-                        html.H4("Placeholder 2", className="text-center"),
-                        html.Div(id="placeholder-2", className="border p-3", style={"height": "250px"})
+                        html.H4("Trade Trend Graph", className="text-center"),
+                        html.Iframe(id="placeholder-2", style={"width": "100%", "height": "400px", "border": "none"})
                     ], width=6, className="p-2"),
                 ], className="mb-3")
             ], style={"height": "100vh", "margin-left": "300px"})
@@ -137,6 +138,22 @@ def update_summary(selected_year, selected_province, selected_category):
     Updates the trade summary based on selected filters.
     """
     return create_summary_component(year=selected_year, geo_filter=selected_province, category=selected_category)
+
+# Callback to update the trade trend graph in Placeholder 2
+@app.callback(
+    Output("placeholder-2", "srcDoc"),
+    Input("province-dropdown", "value"),
+    Input("goods-dropdown", "value")
+)
+def update_trend_graph(selected_province, selected_category):
+    """
+    Updates the trade trend graph based on selected province and category.
+    """
+    try:
+        trend_chart = trend_graph.create_trend_graph(geo_filter=selected_province, category=selected_category)
+        return trend_chart.to_html()
+    except Exception as e:
+        return "<h3>Error: Failed to load trend graph. Check logs.</h3>"
 
 if __name__ == '__main__':
     app.run_server(debug=True)

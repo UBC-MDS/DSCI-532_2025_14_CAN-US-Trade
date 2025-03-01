@@ -18,7 +18,7 @@ def generate_summary(year=2024, geo_filter="Canada", category="All sections"):
         dict: A dictionary containing net trade balance, exports, and imports.
     """
     df = pd.read_csv(CLEAN_DATA_PATH)
-    df["YEAR"] = pd.to_datetime(df["YEAR"]).dt.year  
+    #df["YEAR"] = pd.to_datetime(df["YEAR"]).dt.year  
 
     # Ensure correct filtering logic
     df = df[df["YEAR"] == year]
@@ -49,9 +49,9 @@ def format_large_number(value):
     Returns:
         str: Formatted number string.
     """
-    if value >= 1e6:
+    if abs(value) >= 1e6:
         return f"CA$ {value / 1e6:,.0f}M"
-    elif value >= 1e3:
+    elif abs(value) >= 1e3:
         return f"CA$ {value / 1e3:,.0f}K"
     else:
         return f"CA$ {value:,.0f}"
