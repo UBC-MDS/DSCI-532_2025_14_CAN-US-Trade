@@ -2,7 +2,7 @@
 
 Welcome to the Canada-U.S. Trade Relations Dashboard repository!
 
-![Our dashboard!](img/screen-record.gif)
+![Our dashboard!](img/demo.gif)
 
 ## About our dashboard
 
