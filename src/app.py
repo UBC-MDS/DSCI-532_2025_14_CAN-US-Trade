@@ -3,17 +3,17 @@ import pandas as pd
 import dash
 from dash import dcc, html, Output, Input
 import dash_bootstrap_components as dbc
- # Import the trend graph function
+
 
 # Import necessary functions based on the environment (local vs. Render)
 if "RENDER" in os.environ:
     from src.trade_map import create_trade_map
     from src.summary import create_summary_component
-    import trend_graph 
+    from trend_graph import create_trend_graph
 else:
     from trade_map import create_trade_map
     from summary import create_summary_component
-    import trend_graph 
+    from trend_graph import create_trend_graph
 
 # Load and process cleaned trade data
 CLEAN_DATA_PATH = "data/clean/clean.csv"
@@ -152,7 +152,7 @@ def update_trend_graph(selected_province, selected_category):
     Updates the trade trend graph based on selected province and category.
     """
     try:
-        trend_chart = trend_graph.create_trend_graph(geo_filter=selected_province, category=selected_category)
+        trend_chart = create_trend_graph(geo_filter=selected_province, category=selected_category)
         return trend_chart.to_html()
     except Exception as e:
         return "<h3>Error: Failed to load trend graph. Check logs.</h3>"
