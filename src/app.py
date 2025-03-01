@@ -3,18 +3,6 @@ CAN-US Trade Relations Dashboard
 Author: Elshaday Yoseph
 Date: 2025-02-28
 
-This Dash application provides an interactive dashboard for visualizing
-trade relations between Canada and the US. The dashboard includes:
-
-1. A **Trade Map** to display trade flow across provinces/territories.
-2. A **Trade Composition Figure** (Placeholder 1) showing the breakdown of trade categories.
-3. A **Trade Trend Graph** (Placeholder 2) depicting trade trends over time.
-
-Users can filter data by:
-- Province/Territory
-- Year
-- Trade Type (Export, Import, Net Trade)
-- Goods and Services Category
 """
 
 import os
@@ -124,7 +112,29 @@ app.layout = dbc.Container(fluid=True, children=[
                         html.H4("Trade Trend Graph", className="text-center"),
                         html.Iframe(id="placeholder-2", style={"width": "100%", "height": "600px", "border": "none"})
                     ], width=6, className="p-2"),
-                ], className="mb-3")
+                ], className="mb-3"),
+                html.Hr(),
+                
+                html.Div([
+                    html.P(
+                        "This Dash application provides an interactive dashboard for visualizing \n"
+                        "trade relations between Canada and the US",
+                        className="text-center font-weight-bold"
+                    ),
+                    html.P(
+                        "Developed by: Danish Karlin Isa, Elshaday Yoseph, Wangkai Zhu",
+                        className="text-center font-weight-bold"
+                    ),
+                    html.P(
+                        ["GitHub Repository: ", 
+                        html.A("https://github.com/UBC-MDS/DSCI-532_2025_14_CAN-US-Trade", href="https://github.com/UBC-MDS/DSCI-532_2025_14_CAN-US-Trade", target="_blank")],
+                        className="text-center"
+                    ),
+                    html.P(
+                        "Last Updated: February 28, 2025",
+                        className="text-center"
+                    ),
+                ], style={"margin-top": "20px"})
             ], style={"height": "100vh", "margin-left": "300px"})
         ], width=10, className="px-2")
     ])
