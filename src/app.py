@@ -2,7 +2,6 @@
 CAN-US Trade Relations Dashboard
 Author: Elshaday Yoseph
 Date: 2025-02-28
-
 """
 
 import os
@@ -28,27 +27,26 @@ CLEAN_DATA_PATH = "data/clean/clean.csv"
 df = pd.read_csv(CLEAN_DATA_PATH)
 
 # Extract unique values for dropdown options
-unique_years = sorted(df["YEAR"].unique(), reverse=True)  # Ensure descending order
+unique_years = sorted(df["YEAR"].unique(), reverse=True)
 unique_provinces = ["Canada"] + sorted([geo for geo in df["GEO"].unique() if geo != "Canada"])
 unique_categories = sorted(df["CATEGORY"].dropna().unique())
 unique_trade_types = sorted(df["TRADE"].unique())  
+
+# Define color scheme
+HEADER_BG_COLOR = "#343A40"  # Dark grey for header
+SIDEBAR_BG_COLOR = "#FFFFF"
+TEXT_COLOR = "black"
 
 # Initialize Dash app with Bootstrap for styling
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server  # Required for deployment
 
 # Define App Layout
-app.layout = dbc.Container(fluid=True, children=[
-    # Main Title
-    html.H1("CAN-US Trade Relations Dashboard", className="text-center mt-3 mb-4"),
-
+app.layout = dbc.Container(fluid=True, style={"height": "100vh", "overflow": "hidden", "background-color": "#f8f9fa"}, children=[
     dbc.Row([
-        # Sidebar with Filters
+        # Sidebar (Filters)
         dbc.Col([
-            html.H4("Filters", className="mb-3"),
-
-            # Province Dropdown
-            html.Label("Province/Territory:"),
+            html.Label("Province/Territory:", style={"color": TEXT_COLOR}),
             dcc.Dropdown(
                 id="province-dropdown",
                 options=[{"label": geo, "value": geo} for geo in unique_provinces],
@@ -56,17 +54,15 @@ app.layout = dbc.Container(fluid=True, children=[
                 className="mb-3"
             ),
 
-            # Year Dropdown
-            html.Label("Year:"),
+            html.Label("Year:", style={"color": TEXT_COLOR}),
             dcc.Dropdown(
                 id="year-dropdown",
                 options=[{"label": str(y), "value": y} for y in unique_years],
-                value=unique_years[0],  # Default to the latest year
+                value=unique_years[0],
                 className="mb-3"
             ),
 
-            # Trade Type Dropdown
-            html.Label("Trade Type:"),
+            html.Label("Trade Type:", style={"color": TEXT_COLOR}),
             dcc.Dropdown(
                 id="trade-type-dropdown",
                 options=[{"label": trade, "value": trade} for trade in unique_trade_types],
@@ -74,68 +70,61 @@ app.layout = dbc.Container(fluid=True, children=[
                 className="mb-3"
             ),
 
-            # Goods and Services Dropdown
-            html.Label("Goods and Services:"),
+            html.Label("Goods and Services:", style={"color": TEXT_COLOR}),
             dcc.Dropdown(
                 id="goods-dropdown",
                 options=[{"label": cat, "value": cat} for cat in unique_categories],
                 value="All sections",
                 className="mb-3"
             ),
-        ], width=2, className="bg-light p-3", style={
-            "position": "fixed", "height": "100vh", "overflow-y": "auto",
-            "min-width": "250px", "max-width": "300px"
-        }),
+
+            html.Hr(style={"border-top": "1px solid white"}),
+            html.P("This Dash application provides an interactive dashboard for visualizing trade relations between Canada and the US",
+                   className="text-center font-weight-bold", style={"color": TEXT_COLOR}),
+            html.P("Developed by: Danish Karlin Isa, Elshaday Yoseph, Wangkai Zhu", className="text-center font-weight-bold", style={"color": TEXT_COLOR}),
+            html.P([
+                "GitHub Repository: ", 
+                html.A("GitHub Link", href="https://github.com/UBC-MDS/DSCI-532_2025_14_CAN-US-Trade", target="_blank", style={"color": "lightblue"})
+            ], className="text-center"),
+            html.P("Last Updated: February 28, 2025", className="text-center", style={"color": TEXT_COLOR}),
+        ], width=2, className="p-3", style={"height": "100vh", "overflow-y": "auto", "background-color": SIDEBAR_BG_COLOR}), 
 
         # Main Content Area
         dbc.Col([
+            # HEADER
             html.Div([
-                # Trade Map and Summary Row
-                dbc.Row([
-                    dbc.Col([
-                        html.Iframe(id="trade-map", style={"width": "100%", "height": "600px", "border": "none"})
-                    ], width=7),
-                    
-                    dbc.Col([
-                        html.Div(id="summary-container", style={"width": "100%"})
-                    ], width=5)
-                ], className="mb-3"),
+                html.H1("CAN-US Trade Relations Dashboard", className="text-center", style={"color": "white", "padding": "15px"})
+            ], style={"background-color": HEADER_BG_COLOR, "border-radius": "8px", "margin-bottom": "10px"}),
 
-                # Trade Composition Figure (Placeholder 1) & Trade Trend Graph (Placeholder 2)
-                dbc.Row([
-                    dbc.Col([
-                        html.H4("Trade Composition Figure", className="text-center"),
-                        html.Iframe(id="placeholder-1", style={"width": "100%", "height": "600px", "border": "none"})
-                    ], width=6, className="p-2"),
-                    
-                    dbc.Col([
-                        html.H4("Trade Trend Graph", className="text-center"),
-                        html.Iframe(id="placeholder-2", style={"width": "100%", "height": "600px", "border": "none"})
-                    ], width=6, className="p-2"),
-                ], className="mb-3"),
-                html.Hr(),
-                
-                html.Div([
-                    html.P(
-                        "This Dash application provides an interactive dashboard for visualizing \n"
-                        "trade relations between Canada and the US",
-                        className="text-center font-weight-bold"
-                    ),
-                    html.P(
-                        "Developed by: Danish Karlin Isa, Elshaday Yoseph, Wangkai Zhu",
-                        className="text-center font-weight-bold"
-                    ),
-                    html.P(
-                        ["GitHub Repository: ", 
-                        html.A("https://github.com/UBC-MDS/DSCI-532_2025_14_CAN-US-Trade", href="https://github.com/UBC-MDS/DSCI-532_2025_14_CAN-US-Trade", target="_blank")],
-                        className="text-center"
-                    ),
-                    html.P(
-                        "Last Updated: February 28, 2025",
-                        className="text-center"
-                    ),
-                ], style={"margin-top": "20px"})
-            ], style={"height": "100vh", "margin-left": "300px"})
+            # First Row - Map & Summary
+            dbc.Row([
+                dbc.Col([
+                    html.Iframe(id="trade-map", 
+                                style={"width": "100%", "height": "100%", "border": "2px solid #ccc", 
+                                       "border-radius": "8px", "overflow": "hidden", "background-color": "white"})
+                ], width=6),
+                dbc.Col([
+                    html.Div(id="summary-container", 
+                             style={"width": "100%", "height": "100%", "border-radius": "8px", 
+                                    "padding": "10px", "background-color": "white"})
+                ], width=6)
+            ], className="g-0", style={"height": "50vh"}),
+
+            # Second Row - Composition Figure & Trend Graph (No Borders)
+            dbc.Row([
+                dbc.Col([
+                    html.H4("Trade Composition Figure", className="text-center"),
+                    html.Iframe(id="placeholder-1", 
+                                style={"width": "100%", "height": "100%", "border": "none", 
+                                       "border-radius": "8px", "overflow": "hidden", "background-color": "white"})
+                ], width=6),
+                dbc.Col([
+                    html.H4("Trade Trend Graph", className="text-center"),
+                    html.Iframe(id="placeholder-2", 
+                                style={"width": "100%", "height": "100%", "border": "none", 
+                                       "border-radius": "8px", "overflow": "hidden", "background-color": "white"})
+                ], width=6),
+            ], className="g-0", style={"height": "50vh"})
         ], width=10, className="px-2")
     ])
 ])
@@ -149,9 +138,6 @@ app.layout = dbc.Container(fluid=True, children=[
     Input("goods-dropdown", "value")
 )
 def update_trade_map(selected_year, selected_province, selected_trade, selected_category):
-    """
-    Updates the trade map visualization based on selected filters.
-    """
     try:
         trade_chart = create_trade_map(
             year=selected_year, trade_type=selected_trade,
@@ -169,12 +155,9 @@ def update_trade_map(selected_year, selected_province, selected_trade, selected_
     Input("goods-dropdown", "value")
 )
 def update_summary(selected_year, selected_province, selected_category):
-    """
-    Updates the trade summary component based on selected filters.
-    """
     return create_summary_component(year=selected_year, geo_filter=selected_province, category=selected_category)
 
-# Callback to update the trade composition figure in Placeholder 1
+# Callback to update the trade composition figure
 @app.callback(
     Output("placeholder-1", "srcDoc"),
     Input("year-dropdown", "value"),
@@ -182,9 +165,6 @@ def update_summary(selected_year, selected_province, selected_category):
     Input("trade-type-dropdown", "value")
 )
 def update_composition_figure(selected_year, selected_province, selected_trade):
-    """
-    Updates the trade composition figure (Placeholder 1) based on selected filters.
-    """
     try:
         composition_chart = create_composition_figure(
             year_filter=selected_year, geo_filter=selected_province, trade_filter=selected_trade
@@ -193,16 +173,13 @@ def update_composition_figure(selected_year, selected_province, selected_trade):
     except Exception:
         return "<h3>Error: Failed to load composition figure. Check logs.</h3>"
 
-# Callback to update the trade trend graph in Placeholder 2
+# Callback to update the trade trend graph
 @app.callback(
     Output("placeholder-2", "srcDoc"),
     Input("province-dropdown", "value"),
     Input("goods-dropdown", "value")
 )
 def update_trend_graph(selected_province, selected_category):
-    """
-    Updates the trade trend graph (Placeholder 2) based on selected filters.
-    """
     try:
         trend_chart = create_trend_graph(geo_filter=selected_province, category=selected_category)
         return trend_chart.to_html()
