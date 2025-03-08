@@ -96,7 +96,7 @@ def create_trade_map(year, trade_type, category, geo_filter):
         .add_params(hover)
         .properties(
             width=500,  # Increased width for better visibility
-            height=350,  # Increased height for better proportion
+            height=320,  # Increased height for better proportion
             title=alt.TitleParams(
                 f"Trade Flow: {trade_type} in {year} ({category})",
                 fontSize=20,

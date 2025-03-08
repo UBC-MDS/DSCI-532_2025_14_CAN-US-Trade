@@ -39,7 +39,7 @@ def create_composition_figure(year_filter=2024, geo_filter='Canada', trade_filte
         (alt.datum.CATEGORY != 'All sections') &
         (alt.datum.TRADE == trade_filter)
     ).properties(
-        width=600,  # Ensure fixed width
+        width=530,  # Ensure fixed width
         height=200  # Ensure fixed height
     )
 

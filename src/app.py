@@ -100,12 +100,12 @@ app.layout = dbc.Container(fluid=True, style={"height": "100vh", "overflow": "hi
             dbc.Row([
                 dbc.Col([
                     html.Iframe(id="trade-map", 
-                                style={"width": "100%", "height": "100%", "border": "2px solid #ccc", 
+                                style={"width": "100%", "height": "90%", "border": "2px solid #ccc", 
                                        "border-radius": "8px", "overflow": "hidden", "background-color": "white"})
                 ], width=6),
                 dbc.Col([
                     html.Div(id="summary-container", 
-                             style={"width": "100%", "height": "100%", "border-radius": "8px", 
+                             style={"width": "100%", "height": "92%", "border-radius": "8px", 
                                     "padding": "10px", "background-color": "white"})
                 ], width=6)
             ], className="g-0", style={"height": "50vh"}),
@@ -115,13 +115,13 @@ app.layout = dbc.Container(fluid=True, style={"height": "100vh", "overflow": "hi
                 dbc.Col([
                     html.H4("Trade Composition Figure", className="text-center"),
                     html.Iframe(id="placeholder-1", 
-                                style={"width": "100%", "height": "100%", "border": "none", 
+                                style={"width": "100%", "height": "90%", "border": "none", 
                                        "border-radius": "8px", "overflow": "hidden", "background-color": "white"})
                 ], width=6),
                 dbc.Col([
                     html.H4("Trade Trend Graph", className="text-center"),
                     html.Iframe(id="placeholder-2", 
-                                style={"width": "100%", "height": "100%", "border": "none", 
+                                style={"width": "100%", "height": "90%", "border": "none", 
                                        "border-radius": "8px", "overflow": "hidden", "background-color": "white"})
                 ], width=6),
             ], className="g-0", style={"height": "50vh"})
