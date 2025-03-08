@@ -114,10 +114,8 @@ app.layout = dbc.Container(fluid=True, style={"height": "100vh", "overflow": "hi
             dbc.Row([
                 dbc.Col([
                     html.H4("Trade Composition Figure", className="text-center"),
-                    # html.Iframe(id="placeholder-1", 
-                    #             style={"width": "100%", "height": "90%", "border": "none", 
-                    #                    "border-radius": "8px", "overflow": "hidden", "background-color": "white"})
-                    html.Div(id="placeholder-1", style={"width": "100%", "height": "600px"})
+                    #html.Div(id="placeholder-1", style={"width": "100%", "height": "600px"})
+                    html.Div(id="placeholder-1", style={"width": "100%", "height": "400px", "overflow": "hidden"})
                 ], width=6),
                 dbc.Col([
                     html.H4("Trade Trend Graph", className="text-center"),

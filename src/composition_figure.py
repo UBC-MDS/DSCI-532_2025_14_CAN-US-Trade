@@ -24,7 +24,7 @@ def create_composition_figure(year_filter=2024, geo_filter='Canada', trade_filte
     # Create treemap
     fig = px.treemap(
         filtered_data, 
-        path=['CATEGORY'],  # Group by category
+        path=[px.Constant("Total"), 'CATEGORY'],  # Group by category
         values='VALUE',  # Size of rectangles based on trade value
         color='VALUE',  # Color by value
         color_continuous_scale='sunset'  # Color gradient
@@ -44,7 +44,11 @@ def create_composition_figure(year_filter=2024, geo_filter='Canada', trade_filte
 
     fig.update_layout(
         showlegend=False,  # Hide the legend
-        coloraxis_showscale=False
+        coloraxis_showscale=False, # Hide legends
+        autosize=True,  # Let it adjust automatically
+        width=700,  # Reduce width
+        height=320,  # Reduce height to prevent cutoff
+        margin=dict(t=0, l=0, r=0, b=0),  # Reduce extra margins
     )
 
     return fig
