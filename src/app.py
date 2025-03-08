@@ -114,9 +114,10 @@ app.layout = dbc.Container(fluid=True, style={"height": "100vh", "overflow": "hi
             dbc.Row([
                 dbc.Col([
                     html.H4("Trade Composition Figure", className="text-center"),
-                    html.Iframe(id="placeholder-1", 
-                                style={"width": "100%", "height": "90%", "border": "none", 
-                                       "border-radius": "8px", "overflow": "hidden", "background-color": "white"})
+                    # html.Iframe(id="placeholder-1", 
+                    #             style={"width": "100%", "height": "90%", "border": "none", 
+                    #                    "border-radius": "8px", "overflow": "hidden", "background-color": "white"})
+                    html.Div(id="placeholder-1", style={"width": "100%", "height": "600px"})
                 ], width=6),
                 dbc.Col([
                     html.H4("Trade Trend Graph", className="text-center"),
@@ -159,7 +160,7 @@ def update_summary(selected_year, selected_province, selected_category):
 
 # Callback to update the trade composition figure
 @app.callback(
-    Output("placeholder-1", "srcDoc"),
+    Output("placeholder-1", "children"),
     Input("year-dropdown", "value"),
     Input("province-dropdown", "value"),
     Input("trade-type-dropdown", "value")
@@ -169,7 +170,9 @@ def update_composition_figure(selected_year, selected_province, selected_trade):
         composition_chart = create_composition_figure(
             year_filter=selected_year, geo_filter=selected_province, trade_filter=selected_trade
         )
-        return composition_chart.to_html()
+        return html.Div([
+            dcc.Graph(figure=composition_chart) 
+        ])
     except Exception:
         return "<h3>Error: Failed to load composition figure. Check logs.</h3>"
 
