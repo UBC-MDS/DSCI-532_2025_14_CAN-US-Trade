@@ -22,12 +22,17 @@ def create_trend_graph(geo_filter='Canada', category='All sections'):
         alt.Tooltip('TRADE', title='Trade type'),
         alt.Tooltip('VALUE', title='Value', format='($,~')
     ]
-    color = alt.Color('TRADE', title=None, legend=alt.Legend(orient='bottom'))
+    color = alt.Color('TRADE', legend=None)
+    color_condition = alt.condition(
+        alt.datum.VALUE < 0,
+        alt.value('red'),  # Color if condition is true
+        alt.value('green')  # Color if condition is false
+    )
 
     bar_graph = alt.Chart(data).mark_bar(cursor="pointer").encode(
         x=x_axis,
         y=y_axis,
-        color=color,
+        color=color_condition,
         tooltip=tooltip
     ).transform_filter(
         (alt.datum.GEO == geo_filter) &
@@ -38,7 +43,6 @@ def create_trend_graph(geo_filter='Canada', category='All sections'):
     trendline = alt.Chart(data).encode(
         x=x_axis,
         y=y_axis,
-        color=color,
         tooltip=tooltip
     ).transform_filter(
         (alt.datum.GEO == geo_filter) &
@@ -48,11 +52,12 @@ def create_trend_graph(geo_filter='Canada', category='All sections'):
 
     final_chart = alt.layer(
         bar_graph,
-        trendline.mark_line(color='red'),
-        trendline.mark_circle(size=75, color='red', opacity=1)
+        trendline.mark_line(color='yellow'),
+        trendline.mark_circle(size=100, color='yellow', opacity=1)
     ).properties(
         width='container',
-        height=200   # Ensure the chart has a fixed height
+        height=200
     )
 
     return final_chart
+
