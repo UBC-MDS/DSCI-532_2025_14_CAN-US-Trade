@@ -51,7 +51,7 @@ def create_trend_graph(geo_filter='Canada', category='All sections'):
         trendline.mark_line(color='red'),
         trendline.mark_circle(size=75, color='red', opacity=1)
     ).properties(
-        width=600,  # Ensure the chart has a fixed width
+        width='container',
         height=200   # Ensure the chart has a fixed height
     )
 
