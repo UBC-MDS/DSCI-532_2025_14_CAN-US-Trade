@@ -24,8 +24,9 @@ our dashboard as we have done so in Milestone 2:
 
 We have implemented several refinements:
 
-- Changed the trade composition figure from a bar chart to a treemap for better visualisation
+- Changed the trade composition figure from a bar chart to a treemap for better visualisation (refer to challenging)
 - Moved footer text to sidebar to make better use of space
+- More refinements listed in the `Addressing feedback` section below.
 
 We have also managed to modularise the code:
 
@@ -62,6 +63,17 @@ Future improvements:
 - 2-way callbacks such that clicking on the figures can also act as a filter.
 - Support for narrow screens like smartphones.
 
-## Challenging question
+## Get Inspiration from Your Peers (Challenging)
 
-Not attempted.
+Inspiration from Group 22 (NYC Arrest Tracker): 
+
+- They used pie charts to illustrate the composition of crime types, arrests by gender, etc.  
+- This approach makes it more intuitive to highlight key sections that contribute to the overall picture.
+
+What we changed:
+
+- We replaced our bar chart (which shows composition of goods and services) with a treemap that better represents categories and their relative proportions. 
+
+How it improves our dashboard:
+- We can use it to highlight the major categories of goods that make up Canada's and its provinces' exports and imports.
+- A proportional visualization makes the data more straightforward and interpretable.
