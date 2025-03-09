@@ -1820,11 +1820,11 @@ YEAR,GEO,CATEGORY,TRADE,VALUE
 2023,Yukon,Motor vehicles and parts,Export,0.0
 2023,Yukon,Special transactions trade,Export,169700.0
 2024,Alberta,Aircraft and other transportation equipment and parts,Export,309465600.0
-2024,Alberta,All sections,Export,161571573600.0
+2024,Alberta,All sections,Export,161626480600.0
 2024,Alberta,"Basic and industrial chemical, plastic and rubber products",Export,8669654500.0
 2024,Alberta,Consumer goods,Export,4836449200.0
 2024,Alberta,Electronic and electrical equipment and parts,Export,1113181900.0
-2024,Alberta,Energy products,Export,132484945600.0
+2024,Alberta,Energy products,Export,132539852600.0
 2024,Alberta,"Farm, fishing and intermediate food products",Export,4803899000.0
 2024,Alberta,Forestry products and building and packaging materials,Export,3558942900.0
 2024,Alberta,"Industrial machinery, equipment and parts",Export,3334980400.0
@@ -1833,11 +1833,11 @@ YEAR,GEO,CATEGORY,TRADE,VALUE
 2024,Alberta,Motor vehicles and parts,Export,558584400.0
 2024,Alberta,Special transactions trade,Export,455344300.0
 2024,British Columbia,Aircraft and other transportation equipment and parts,Export,331959400.0
-2024,British Columbia,All sections,Export,28724925600.0
+2024,British Columbia,All sections,Export,28789097100.0
 2024,British Columbia,"Basic and industrial chemical, plastic and rubber products",Export,955365300.0
 2024,British Columbia,Consumer goods,Export,3392480000.0
 2024,British Columbia,Electronic and electrical equipment and parts,Export,2373923600.0
-2024,British Columbia,Energy products,Export,5554592700.0
+2024,British Columbia,Energy products,Export,5618764200.0
 2024,British Columbia,"Farm, fishing and intermediate food products",Export,2231269700.0
 2024,British Columbia,Forestry products and building and packaging materials,Export,7544280900.0
 2024,British Columbia,"Industrial machinery, equipment and parts",Export,2046261600.0
@@ -1845,25 +1845,25 @@ YEAR,GEO,CATEGORY,TRADE,VALUE
 2024,British Columbia,Metal ores and non-metallic minerals,Export,86233000.0
 2024,British Columbia,Motor vehicles and parts,Export,605333300.0
 2024,British Columbia,Special transactions trade,Export,361970900.0
-2024,Canada,Aircraft and other transportation equipment and parts,Export,16845610399.999998
-2024,Canada,All sections,Export,546601738100.0
+2024,Canada,Aircraft and other transportation equipment and parts,Export,16875034399.999998
+2024,Canada,All sections,Export,546905342000.0
 2024,Canada,"Basic and industrial chemical, plastic and rubber products",Export,36281062100.0
-2024,Canada,Consumer goods,Export,64966361500.0
+2024,Canada,Consumer goods,Export,64636455100.0
 2024,Canada,Electronic and electrical equipment and parts,Export,18803780100.0
-2024,Canada,Energy products,Export,170954084500.0
+2024,Canada,Energy products,Export,171228264400.0
 2024,Canada,"Farm, fishing and intermediate food products",Export,28005499200.0
 2024,Canada,Forestry products and building and packaging materials,Export,39286262400.0
 2024,Canada,"Industrial machinery, equipment and parts",Export,32014494100.0
-2024,Canada,Metal and non-metallic mineral products,Export,51867781200.0
+2024,Canada,Metal and non-metallic mineral products,Export,52197687600.0
 2024,Canada,Metal ores and non-metallic minerals,Export,6429595900.0
 2024,Canada,Motor vehicles and parts,Export,75575284400.0
 2024,Canada,Special transactions trade,Export,5571922400.0
 2024,Manitoba,Aircraft and other transportation equipment and parts,Export,391960100.0
-2024,Manitoba,All sections,Export,14463650000.0
+2024,Manitoba,All sections,Export,14453848100.0
 2024,Manitoba,"Basic and industrial chemical, plastic and rubber products",Export,915026400.0
 2024,Manitoba,Consumer goods,Export,3343508900.0
 2024,Manitoba,Electronic and electrical equipment and parts,Export,355900700.0
-2024,Manitoba,Energy products,Export,1445036100.0
+2024,Manitoba,Energy products,Export,1435234200.0
 2024,Manitoba,"Farm, fishing and intermediate food products",Export,2894900600.0
 2024,Manitoba,Forestry products and building and packaging materials,Export,880324900.0
 2024,Manitoba,"Industrial machinery, equipment and parts",Export,2041903600.0
@@ -1872,11 +1872,11 @@ YEAR,GEO,CATEGORY,TRADE,VALUE
 2024,Manitoba,Motor vehicles and parts,Export,1251893600.0
 2024,Manitoba,Special transactions trade,Export,378137100.0
 2024,New Brunswick,Aircraft and other transportation equipment and parts,Export,53437000.0
-2024,New Brunswick,All sections,Export,15775909900.0
+2024,New Brunswick,All sections,Export,15784200500.0
 2024,New Brunswick,"Basic and industrial chemical, plastic and rubber products",Export,5104207800.0
 2024,New Brunswick,Consumer goods,Export,1226324700.0
 2024,New Brunswick,Electronic and electrical equipment and parts,Export,75342300.0
-2024,New Brunswick,Energy products,Export,5592623900.0
+2024,New Brunswick,Energy products,Export,5600914500.0
 2024,New Brunswick,"Farm, fishing and intermediate food products",Export,1308368400.0
 2024,New Brunswick,Forestry products and building and packaging materials,Export,1895363500.0
 2024,New Brunswick,"Industrial machinery, equipment and parts",Export,226186400.0
@@ -1885,11 +1885,11 @@ YEAR,GEO,CATEGORY,TRADE,VALUE
 2024,New Brunswick,Motor vehicles and parts,Export,56619200.0
 2024,New Brunswick,Special transactions trade,Export,72199100.0
 2024,Newfoundland and Labrador,Aircraft and other transportation equipment and parts,Export,6242700.0
-2024,Newfoundland and Labrador,All sections,Export,6875285100.0
+2024,Newfoundland and Labrador,All sections,Export,6877029500.0
 2024,Newfoundland and Labrador,"Basic and industrial chemical, plastic and rubber products",Export,698792700.0
 2024,Newfoundland and Labrador,Consumer goods,Export,72949700.0
 2024,Newfoundland and Labrador,Electronic and electrical equipment and parts,Export,10366000.0
-2024,Newfoundland and Labrador,Energy products,Export,4815780800.0
+2024,Newfoundland and Labrador,Energy products,Export,4817525200.0
 2024,Newfoundland and Labrador,"Farm, fishing and intermediate food products",Export,842162000.0
 2024,Newfoundland and Labrador,Forestry products and building and packaging materials,Export,36968200.0
 2024,Newfoundland and Labrador,"Industrial machinery, equipment and parts",Export,9368800.0
@@ -1937,15 +1937,15 @@ YEAR,GEO,CATEGORY,TRADE,VALUE
 2024,Nunavut,Motor vehicles and parts,Export,0.0
 2024,Nunavut,Special transactions trade,Export,252900.0
 2024,Ontario,Aircraft and other transportation equipment and parts,Export,3007132800.0
-2024,Ontario,All sections,Export,194855809600.0
+2024,Ontario,All sections,Export,194928813100.0
 2024,Ontario,"Basic and industrial chemical, plastic and rubber products",Export,13959035400.0
-2024,Ontario,Consumer goods,Export,35442591400.0
+2024,Ontario,Consumer goods,Export,35112685100.0
 2024,Ontario,Electronic and electrical equipment and parts,Export,9995027300.0
-2024,Ontario,Energy products,Export,2556656200.0
+2024,Ontario,Energy products,Export,2629659700.0
 2024,Ontario,"Farm, fishing and intermediate food products",Export,6530569800.0
 2024,Ontario,Forestry products and building and packaging materials,Export,12498665900.0
 2024,Ontario,"Industrial machinery, equipment and parts",Export,17448643700.0
-2024,Ontario,Metal and non-metallic mineral products,Export,25033944900.0
+2024,Ontario,Metal and non-metallic mineral products,Export,25363851200.0
 2024,Ontario,Metal ores and non-metallic minerals,Export,404854400.0
 2024,Ontario,Motor vehicles and parts,Export,65019059500.0
 2024,Ontario,Special transactions trade,Export,2959628400.0
@@ -1962,12 +1962,12 @@ YEAR,GEO,CATEGORY,TRADE,VALUE
 2024,Prince Edward Island,Metal ores and non-metallic minerals,Export,924500.0
 2024,Prince Edward Island,Motor vehicles and parts,Export,15233200.0
 2024,Prince Edward Island,Special transactions trade,Export,237962600.0
-2024,Quebec,Aircraft and other transportation equipment and parts,Export,12574871500.0
-2024,Quebec,All sections,Export,90978730900.0
+2024,Quebec,Aircraft and other transportation equipment and parts,Export,12604295500.0
+2024,Quebec,All sections,Export,91072369800.0
 2024,Quebec,"Basic and industrial chemical, plastic and rubber products",Export,5408208000.0
 2024,Quebec,Consumer goods,Export,14819471800.0
 2024,Quebec,Electronic and electrical equipment and parts,Export,4543491100.0
-2024,Quebec,Energy products,Export,4156691300.0
+2024,Quebec,Energy products,Export,4220906300.0
 2024,Quebec,"Farm, fishing and intermediate food products",Export,2226957300.0
 2024,Quebec,Forestry products and building and packaging materials,Export,11808813600.0
 2024,Quebec,"Industrial machinery, equipment and parts",Export,6168014000.0
@@ -1976,11 +1976,11 @@ YEAR,GEO,CATEGORY,TRADE,VALUE
 2024,Quebec,Motor vehicles and parts,Export,6328366900.0
 2024,Quebec,Special transactions trade,Export,927558800.0
 2024,Saskatchewan,Aircraft and other transportation equipment and parts,Export,6999200.0
-2024,Saskatchewan,All sections,Export,26700217400.0
+2024,Saskatchewan,All sections,Export,26717867200.0
 2024,Saskatchewan,"Basic and industrial chemical, plastic and rubber products",Export,337909600.0
 2024,Saskatchewan,Consumer goods,Export,144326600.0
 2024,Saskatchewan,Electronic and electrical equipment and parts,Export,138414400.0
-2024,Saskatchewan,Energy products,Export,14347003200.0
+2024,Saskatchewan,Energy products,Export,14364653100.0
 2024,Saskatchewan,"Farm, fishing and intermediate food products",Export,5761449600.0
 2024,Saskatchewan,Forestry products and building and packaging materials,Export,435310500.0
 2024,Saskatchewan,"Industrial machinery, equipment and parts",Export,591361600.0
@@ -3821,84 +3821,84 @@ YEAR,GEO,CATEGORY,TRADE,VALUE
 2023,Yukon,Metal ores and non-metallic minerals,Import,-11300.0
 2023,Yukon,Motor vehicles and parts,Import,-713200.0
 2023,Yukon,Special transactions trade,Import,-6000.0
-2024,Alberta,Aircraft and other transportation equipment and parts,Import,-865722900.0
-2024,Alberta,All sections,Import,-24958427100.0
-2024,Alberta,"Basic and industrial chemical, plastic and rubber products",Import,-11061308300.0
-2024,Alberta,Consumer goods,Import,-2008684300.0
-2024,Alberta,Electronic and electrical equipment and parts,Import,-1319180300.0
-2024,Alberta,Energy products,Import,-1944047000.0
-2024,Alberta,"Farm, fishing and intermediate food products",Import,-1711128800.0
-2024,Alberta,Forestry products and building and packaging materials,Import,-821295800.0
-2024,Alberta,"Industrial machinery, equipment and parts",Import,-2694242600.0
-2024,Alberta,Metal and non-metallic mineral products,Import,-788596000.0
-2024,Alberta,Metal ores and non-metallic minerals,Import,-106546800.0
-2024,Alberta,Motor vehicles and parts,Import,-1389677400.0
-2024,Alberta,Special transactions trade,Import,-247996800.0
-2024,British Columbia,Aircraft and other transportation equipment and parts,Import,-958907700.0
-2024,British Columbia,All sections,Import,-25244953800.0
-2024,British Columbia,"Basic and industrial chemical, plastic and rubber products",Import,-1597841300.0
-2024,British Columbia,Consumer goods,Import,-4471446000.0
-2024,British Columbia,Electronic and electrical equipment and parts,Import,-1591240000.0
-2024,British Columbia,Energy products,Import,-2841223000.0
-2024,British Columbia,"Farm, fishing and intermediate food products",Import,-2671963800.0
-2024,British Columbia,Forestry products and building and packaging materials,Import,-3036308400.0
-2024,British Columbia,"Industrial machinery, equipment and parts",Import,-2726237900.0
-2024,British Columbia,Metal and non-metallic mineral products,Import,-1386379000.0
-2024,British Columbia,Metal ores and non-metallic minerals,Import,-959220800.0
-2024,British Columbia,Motor vehicles and parts,Import,-2692892100.0
-2024,British Columbia,Special transactions trade,Import,-311293800.0
-2024,Canada,Aircraft and other transportation equipment and parts,Import,-12536449800.0
-2024,Canada,All sections,Import,-375752959700.0
-2024,Canada,"Basic and industrial chemical, plastic and rubber products",Import,-42204988300.0
-2024,Canada,Consumer goods,Import,-56302101900.0
-2024,Canada,Electronic and electrical equipment and parts,Import,-24423687200.0
-2024,Canada,Energy products,Import,-27350490200.0
-2024,Canada,"Farm, fishing and intermediate food products",Import,-15306065000.0
-2024,Canada,Forestry products and building and packaging materials,Import,-23197848400.0
-2024,Canada,"Industrial machinery, equipment and parts",Import,-41581771400.0
-2024,Canada,Metal and non-metallic mineral products,Import,-28851591800.0
-2024,Canada,Metal ores and non-metallic minerals,Import,-4299676700.0
-2024,Canada,Motor vehicles and parts,Import,-81921801000.0
-2024,Canada,Special transactions trade,Import,-17776488100.0
-2024,Manitoba,Aircraft and other transportation equipment and parts,Import,-1681234000.0
-2024,Manitoba,All sections,Import,-22958753200.0
-2024,Manitoba,"Basic and industrial chemical, plastic and rubber products",Import,-3836702700.0
-2024,Manitoba,Consumer goods,Import,-2613176000.0
-2024,Manitoba,Electronic and electrical equipment and parts,Import,-1522527700.0
-2024,Manitoba,Energy products,Import,-500730700.0
-2024,Manitoba,"Farm, fishing and intermediate food products",Import,-1000520600.0
-2024,Manitoba,Forestry products and building and packaging materials,Import,-1517383200.0
-2024,Manitoba,"Industrial machinery, equipment and parts",Import,-5872819100.0
-2024,Manitoba,Metal and non-metallic mineral products,Import,-1211508900.0
-2024,Manitoba,Metal ores and non-metallic minerals,Import,-407004400.0
-2024,Manitoba,Motor vehicles and parts,Import,-2630197700.0
-2024,Manitoba,Special transactions trade,Import,-164948200.0
-2024,New Brunswick,Aircraft and other transportation equipment and parts,Import,-56877200.0
-2024,New Brunswick,All sections,Import,-10101853200.0
-2024,New Brunswick,"Basic and industrial chemical, plastic and rubber products",Import,-521453300.0
-2024,New Brunswick,Consumer goods,Import,-374859800.0
-2024,New Brunswick,Electronic and electrical equipment and parts,Import,-157497300.0
-2024,New Brunswick,Energy products,Import,-6952651900.0
-2024,New Brunswick,"Farm, fishing and intermediate food products",Import,-542472800.0
-2024,New Brunswick,Forestry products and building and packaging materials,Import,-479403000.0
-2024,New Brunswick,"Industrial machinery, equipment and parts",Import,-406980800.0
-2024,New Brunswick,Metal and non-metallic mineral products,Import,-213068400.0
-2024,New Brunswick,Metal ores and non-metallic minerals,Import,-6231600.0
-2024,New Brunswick,Motor vehicles and parts,Import,-365825000.0
-2024,New Brunswick,Special transactions trade,Import,-24532000.0
-2024,Newfoundland and Labrador,Aircraft and other transportation equipment and parts,Import,-9380500.0
-2024,Newfoundland and Labrador,All sections,Import,-938909200.0
-2024,Newfoundland and Labrador,"Basic and industrial chemical, plastic and rubber products",Import,-749400.0
-2024,Newfoundland and Labrador,Consumer goods,Import,-126980100.0
-2024,Newfoundland and Labrador,Electronic and electrical equipment and parts,Import,-4796600.0
+2024,Alberta,Aircraft and other transportation equipment and parts,Import,-867214300.0
+2024,Alberta,All sections,Import,-25034193900.0
+2024,Alberta,"Basic and industrial chemical, plastic and rubber products",Import,-11072246500.0
+2024,Alberta,Consumer goods,Import,-2032895200.0
+2024,Alberta,Electronic and electrical equipment and parts,Import,-1318706900.0
+2024,Alberta,Energy products,Import,-1947273300.0
+2024,Alberta,"Farm, fishing and intermediate food products",Import,-1712964900.0
+2024,Alberta,Forestry products and building and packaging materials,Import,-827140000.0
+2024,Alberta,"Industrial machinery, equipment and parts",Import,-2714018000.0
+2024,Alberta,Metal and non-metallic mineral products,Import,-791023100.0
+2024,Alberta,Metal ores and non-metallic minerals,Import,-106638500.0
+2024,Alberta,Motor vehicles and parts,Import,-1395053900.0
+2024,Alberta,Special transactions trade,Import,-249019100.0
+2024,British Columbia,Aircraft and other transportation equipment and parts,Import,-963677400.0
+2024,British Columbia,All sections,Import,-25382885300.0
+2024,British Columbia,"Basic and industrial chemical, plastic and rubber products",Import,-1604181800.0
+2024,British Columbia,Consumer goods,Import,-4502008700.0
+2024,British Columbia,Electronic and electrical equipment and parts,Import,-1603599000.0
+2024,British Columbia,Energy products,Import,-2845380000.0
+2024,British Columbia,"Farm, fishing and intermediate food products",Import,-2677735500.0
+2024,British Columbia,Forestry products and building and packaging materials,Import,-3044821800.0
+2024,British Columbia,"Industrial machinery, equipment and parts",Import,-2763315500.0
+2024,British Columbia,Metal and non-metallic mineral products,Import,-1391104400.0
+2024,British Columbia,Metal ores and non-metallic minerals,Import,-959625500.0
+2024,British Columbia,Motor vehicles and parts,Import,-2706470900.0
+2024,British Columbia,Special transactions trade,Import,-320964600.0
+2024,Canada,Aircraft and other transportation equipment and parts,Import,-12727723000.0
+2024,Canada,All sections,Import,-375016840200.0
+2024,Canada,"Basic and industrial chemical, plastic and rubber products",Import,-42349667000.0
+2024,Canada,Consumer goods,Import,-56791212200.0
+2024,Canada,Electronic and electrical equipment and parts,Import,-24559987200.0
+2024,Canada,Energy products,Import,-27434447900.0
+2024,Canada,"Farm, fishing and intermediate food products",Import,-15349934800.0
+2024,Canada,Forestry products and building and packaging materials,Import,-23290409900.0
+2024,Canada,"Industrial machinery, equipment and parts",Import,-42061735700.0
+2024,Canada,Metal and non-metallic mineral products,Import,-28957783800.0
+2024,Canada,Metal ores and non-metallic minerals,Import,-4302620600.0
+2024,Canada,Motor vehicles and parts,Import,-81917163000.0
+2024,Canada,Special transactions trade,Import,-15274155300.0
+2024,Manitoba,Aircraft and other transportation equipment and parts,Import,-1686536200.0
+2024,Manitoba,All sections,Import,-23117861300.0
+2024,Manitoba,"Basic and industrial chemical, plastic and rubber products",Import,-3848232800.0
+2024,Manitoba,Consumer goods,Import,-2624998800.0
+2024,Manitoba,Electronic and electrical equipment and parts,Import,-1528856000.0
+2024,Manitoba,Energy products,Import,-527738400.0
+2024,Manitoba,"Farm, fishing and intermediate food products",Import,-1003669100.0
+2024,Manitoba,Forestry products and building and packaging materials,Import,-1521097900.0
+2024,Manitoba,"Industrial machinery, equipment and parts",Import,-5934430800.0
+2024,Manitoba,Metal and non-metallic mineral products,Import,-1219599800.0
+2024,Manitoba,Metal ores and non-metallic minerals,Import,-407066700.0
+2024,Manitoba,Motor vehicles and parts,Import,-2645590600.0
+2024,Manitoba,Special transactions trade,Import,-170044200.0
+2024,New Brunswick,Aircraft and other transportation equipment and parts,Import,-56886100.0
+2024,New Brunswick,All sections,Import,-10116360100.0
+2024,New Brunswick,"Basic and industrial chemical, plastic and rubber products",Import,-522816600.0
+2024,New Brunswick,Consumer goods,Import,-378719900.0
+2024,New Brunswick,Electronic and electrical equipment and parts,Import,-157785500.0
+2024,New Brunswick,Energy products,Import,-6956823000.0
+2024,New Brunswick,"Farm, fishing and intermediate food products",Import,-543547800.0
+2024,New Brunswick,Forestry products and building and packaging materials,Import,-481413500.0
+2024,New Brunswick,"Industrial machinery, equipment and parts",Import,-408121900.0
+2024,New Brunswick,Metal and non-metallic mineral products,Import,-213190700.0
+2024,New Brunswick,Metal ores and non-metallic minerals,Import,-6253400.0
+2024,New Brunswick,Motor vehicles and parts,Import,-366172000.0
+2024,New Brunswick,Special transactions trade,Import,-24629600.0
+2024,Newfoundland and Labrador,Aircraft and other transportation equipment and parts,Import,-9381100.0
+2024,Newfoundland and Labrador,All sections,Import,-939780900.0
+2024,Newfoundland and Labrador,"Basic and industrial chemical, plastic and rubber products",Import,-750400.0
+2024,Newfoundland and Labrador,Consumer goods,Import,-126983700.0
+2024,Newfoundland and Labrador,Electronic and electrical equipment and parts,Import,-4798300.0
 2024,Newfoundland and Labrador,Energy products,Import,-729754500.0
 2024,Newfoundland and Labrador,"Farm, fishing and intermediate food products",Import,-37293300.0
-2024,Newfoundland and Labrador,Forestry products and building and packaging materials,Import,-160500.0
-2024,Newfoundland and Labrador,"Industrial machinery, equipment and parts",Import,-11152300.0
-2024,Newfoundland and Labrador,Metal and non-metallic mineral products,Import,-1166500.0
+2024,Newfoundland and Labrador,Forestry products and building and packaging materials,Import,-165300.0
+2024,Newfoundland and Labrador,"Industrial machinery, equipment and parts",Import,-11347300.0
+2024,Newfoundland and Labrador,Metal and non-metallic mineral products,Import,-1179300.0
 2024,Newfoundland and Labrador,Metal ores and non-metallic minerals,Import,-42600.0
-2024,Newfoundland and Labrador,Motor vehicles and parts,Import,-222000.0
-2024,Newfoundland and Labrador,Special transactions trade,Import,-17210900.0
+2024,Newfoundland and Labrador,Motor vehicles and parts,Import,-222300.0
+2024,Newfoundland and Labrador,Special transactions trade,Import,-17862800.0
 2024,Northwest Territories,Aircraft and other transportation equipment and parts,Import,-13100.0
 2024,Northwest Territories,All sections,Import,-79268000.0
 2024,Northwest Territories,"Basic and industrial chemical, plastic and rubber products",Import,-2700.0
@@ -3913,18 +3913,18 @@ YEAR,GEO,CATEGORY,TRADE,VALUE
 2024,Northwest Territories,Motor vehicles and parts,Import,-1500.0
 2024,Northwest Territories,Special transactions trade,Import,-0.0
 2024,Nova Scotia,Aircraft and other transportation equipment and parts,Import,-71183100.0
-2024,Nova Scotia,All sections,Import,-528332199.99999994
-2024,Nova Scotia,"Basic and industrial chemical, plastic and rubber products",Import,-11506000.0
-2024,Nova Scotia,Consumer goods,Import,-121078800.0
+2024,Nova Scotia,All sections,Import,-531872100.0
+2024,Nova Scotia,"Basic and industrial chemical, plastic and rubber products",Import,-11581700.0
+2024,Nova Scotia,Consumer goods,Import,-121405400.0
 2024,Nova Scotia,Electronic and electrical equipment and parts,Import,-6714000.0
-2024,Nova Scotia,Energy products,Import,-262626700.0
+2024,Nova Scotia,Energy products,Import,-262660500.0
 2024,Nova Scotia,"Farm, fishing and intermediate food products",Import,-3819400.0
-2024,Nova Scotia,Forestry products and building and packaging materials,Import,-14160600.0
-2024,Nova Scotia,"Industrial machinery, equipment and parts",Import,-32137600.0
-2024,Nova Scotia,Metal and non-metallic mineral products,Import,-1149500.0
+2024,Nova Scotia,Forestry products and building and packaging materials,Import,-14160900.0
+2024,Nova Scotia,"Industrial machinery, equipment and parts",Import,-35110000.0
+2024,Nova Scotia,Metal and non-metallic mineral products,Import,-1151600.0
 2024,Nova Scotia,Metal ores and non-metallic minerals,Import,-148000.0
-2024,Nova Scotia,Motor vehicles and parts,Import,-653000.0
-2024,Nova Scotia,Special transactions trade,Import,-3155400.0
+2024,Nova Scotia,Motor vehicles and parts,Import,-689400.0
+2024,Nova Scotia,Special transactions trade,Import,-3248100.0
 2024,Nunavut,Aircraft and other transportation equipment and parts,Import,-0.0
 2024,Nunavut,All sections,Import,-60597400.0
 2024,Nunavut,"Basic and industrial chemical, plastic and rubber products",Import,-700.0
@@ -3938,70 +3938,70 @@ YEAR,GEO,CATEGORY,TRADE,VALUE
 2024,Nunavut,Metal ores and non-metallic minerals,Import,-0.0
 2024,Nunavut,Motor vehicles and parts,Import,-0.0
 2024,Nunavut,Special transactions trade,Import,-0.0
-2024,Ontario,Aircraft and other transportation equipment and parts,Import,-3739448200.0
-2024,Ontario,All sections,Import,-243376184600.0
-2024,Ontario,"Basic and industrial chemical, plastic and rubber products",Import,-20287833400.0
-2024,Ontario,Consumer goods,Import,-42420129100.0
-2024,Ontario,Electronic and electrical equipment and parts,Import,-16236056600.0
-2024,Ontario,Energy products,Import,-6236947200.0
-2024,Ontario,"Farm, fishing and intermediate food products",Import,-7809292800.0
-2024,Ontario,Forestry products and building and packaging materials,Import,-14603593900.0
-2024,Ontario,"Industrial machinery, equipment and parts",Import,-22135882000.0
-2024,Ontario,Metal and non-metallic mineral products,Import,-22793148700.0
-2024,Ontario,Metal ores and non-metallic minerals,Import,-2729965100.0
-2024,Ontario,Motor vehicles and parts,Import,-68546257099.99999
-2024,Ontario,Special transactions trade,Import,-15837630500.0
+2024,Ontario,Aircraft and other transportation equipment and parts,Import,-3752546600.0
+2024,Ontario,All sections,Import,-241821739900.0
+2024,Ontario,"Basic and industrial chemical, plastic and rubber products",Import,-20374629000.0
+2024,Ontario,Consumer goods,Import,-42795174600.0
+2024,Ontario,Electronic and electrical equipment and parts,Import,-16304221500.0
+2024,Ontario,Energy products,Import,-6263976000.0
+2024,Ontario,"Farm, fishing and intermediate food products",Import,-7838026900.0
+2024,Ontario,Forestry products and building and packaging materials,Import,-14664670300.0
+2024,Ontario,"Industrial machinery, equipment and parts",Import,-22449241400.0
+2024,Ontario,Metal and non-metallic mineral products,Import,-22864248000.0
+2024,Ontario,Metal ores and non-metallic minerals,Import,-2732247300.0
+2024,Ontario,Motor vehicles and parts,Import,-68489508900.00001
+2024,Ontario,Special transactions trade,Import,-13293249400.0
 2024,Prince Edward Island,Aircraft and other transportation equipment and parts,Import,-188200.0
-2024,Prince Edward Island,All sections,Import,-34550800.0
-2024,Prince Edward Island,"Basic and industrial chemical, plastic and rubber products",Import,-19370300.0
-2024,Prince Edward Island,Consumer goods,Import,-8855800.0
-2024,Prince Edward Island,Electronic and electrical equipment and parts,Import,-1166300.0
+2024,Prince Edward Island,All sections,Import,-34567300.0
+2024,Prince Edward Island,"Basic and industrial chemical, plastic and rubber products",Import,-19376000.0
+2024,Prince Edward Island,Consumer goods,Import,-8861700.0
+2024,Prince Edward Island,Electronic and electrical equipment and parts,Import,-1169000.0
 2024,Prince Edward Island,Energy products,Import,-0.0
 2024,Prince Edward Island,"Farm, fishing and intermediate food products",Import,-501200.0
-2024,Prince Edward Island,Forestry products and building and packaging materials,Import,-1082900.0
+2024,Prince Edward Island,Forestry products and building and packaging materials,Import,-1084600.0
 2024,Prince Edward Island,"Industrial machinery, equipment and parts",Import,-3271600.0
-2024,Prince Edward Island,Metal and non-metallic mineral products,Import,-35900.0
+2024,Prince Edward Island,Metal and non-metallic mineral products,Import,-36300.0
 2024,Prince Edward Island,Metal ores and non-metallic minerals,Import,-0.0
 2024,Prince Edward Island,Motor vehicles and parts,Import,-59800.0
 2024,Prince Edward Island,Special transactions trade,Import,-18800.0
-2024,Quebec,Aircraft and other transportation equipment and parts,Import,-4864644200.0
-2024,Quebec,All sections,Import,-34155651700.000004
-2024,Quebec,"Basic and industrial chemical, plastic and rubber products",Import,-2548069200.0
-2024,Quebec,Consumer goods,Import,-3161879100.0
-2024,Quebec,Electronic and electrical equipment and parts,Import,-2939303500.0
-2024,Quebec,Energy products,Import,-7576085500.0
-2024,Quebec,"Farm, fishing and intermediate food products",Import,-618082700.0
-2024,Quebec,Forestry products and building and packaging materials,Import,-2199612500.0
-2024,Quebec,"Industrial machinery, equipment and parts",Import,-2790436700.0
-2024,Quebec,Metal and non-metallic mineral products,Import,-1876344600.0
-2024,Quebec,Metal ores and non-metallic minerals,Import,-59149400.0
-2024,Quebec,Motor vehicles and parts,Import,-4378040700.0
-2024,Quebec,Special transactions trade,Import,-1144003600.0
-2024,Saskatchewan,Aircraft and other transportation equipment and parts,Import,-286823700.0
-2024,Saskatchewan,All sections,Import,-13254218800.0
-2024,Saskatchewan,"Basic and industrial chemical, plastic and rubber products",Import,-2320081800.0
-2024,Saskatchewan,Consumer goods,Import,-993968500.0
-2024,Saskatchewan,Electronic and electrical equipment and parts,Import,-641720400.0
-2024,Saskatchewan,Energy products,Import,-166697200.0
-2024,Saskatchewan,"Farm, fishing and intermediate food products",Import,-874383400.0
-2024,Saskatchewan,Forestry products and building and packaging materials,Import,-524816100.0
-2024,Saskatchewan,"Industrial machinery, equipment and parts",Import,-4891842400.0
-2024,Saskatchewan,Metal and non-metallic mineral products,Import,-579676800.0
+2024,Quebec,Aircraft and other transportation equipment and parts,Import,-5028549400.0
+2024,Quebec,All sections,Import,-34528899500.0
+2024,Quebec,"Basic and industrial chemical, plastic and rubber products",Import,-2573854000.0
+2024,Quebec,Consumer goods,Import,-3200329400.0
+2024,Quebec,Electronic and electrical equipment and parts,Import,-2985990400.0
+2024,Quebec,Energy products,Import,-7594969800.0
+2024,Quebec,"Farm, fishing and intermediate food products",Import,-619110500.0
+2024,Quebec,Forestry products and building and packaging materials,Import,-2207709400.0
+2024,Quebec,"Industrial machinery, equipment and parts",Import,-2814152900.0
+2024,Quebec,Metal and non-metallic mineral products,Import,-1885560000.0
+2024,Quebec,Metal ores and non-metallic minerals,Import,-59230500.0
+2024,Quebec,Motor vehicles and parts,Import,-4390747900.0
+2024,Quebec,Special transactions trade,Import,-1168695100.0
+2024,Saskatchewan,Aircraft and other transportation equipment and parts,Import,-289520300.0
+2024,Saskatchewan,All sections,Import,-13307271300.0
+2024,Saskatchewan,"Basic and industrial chemical, plastic and rubber products",Import,-2321925400.0
+2024,Saskatchewan,Consumer goods,Import,-998790400.0
+2024,Saskatchewan,Electronic and electrical equipment and parts,Import,-644661900.0
+2024,Saskatchewan,Energy products,Import,-166145900.0
+2024,Saskatchewan,"Farm, fishing and intermediate food products",Import,-876660000.0
+2024,Saskatchewan,Forestry products and building and packaging materials,Import,-528114600.0
+2024,Saskatchewan,"Industrial machinery, equipment and parts",Import,-4911944400.0
+2024,Saskatchewan,Metal and non-metallic mineral products,Import,-590173200.0
 2024,Saskatchewan,Metal ores and non-metallic minerals,Import,-31352000.0
-2024,Saskatchewan,Motor vehicles and parts,Import,-1917158500.0
-2024,Saskatchewan,Special transactions trade,Import,-25698000.0
+2024,Saskatchewan,Motor vehicles and parts,Import,-1921559700.0
+2024,Saskatchewan,Special transactions trade,Import,-26423500.0
 2024,Yukon,Aircraft and other transportation equipment and parts,Import,-2027100.0
-2024,Yukon,All sections,Import,-61259800.0
+2024,Yukon,All sections,Import,-61543300.0
 2024,Yukon,"Basic and industrial chemical, plastic and rubber products",Import,-69200.0
 2024,Yukon,Consumer goods,Import,-1022100.0
 2024,Yukon,Electronic and electrical equipment and parts,Import,-3302700.0
 2024,Yukon,Energy products,Import,-95200.0
 2024,Yukon,"Farm, fishing and intermediate food products",Import,-36606100.0
 2024,Yukon,Forestry products and building and packaging materials,Import,-30500.0
-2024,Yukon,"Industrial machinery, equipment and parts",Import,-16758599.999999998
+2024,Yukon,"Industrial machinery, equipment and parts",Import,-16772200.0
 2024,Yukon,Metal and non-metallic mineral products,Import,-516299.99999999994
 2024,Yukon,Metal ores and non-metallic minerals,Import,-16000.0
-2024,Yukon,Motor vehicles and parts,Import,-815900.0
+2024,Yukon,Motor vehicles and parts,Import,-1085900.0
 2024,Yukon,Special transactions trade,Import,-0.0
 2014,Alberta,Aircraft and other transportation equipment and parts,Net trade,-943236300.0
 2014,Alberta,All sections,Net trade,87526251900.0
@@ -5823,84 +5823,84 @@ YEAR,GEO,CATEGORY,TRADE,VALUE
 2023,Yukon,Metal ores and non-metallic minerals,Net trade,95301300.0
 2023,Yukon,Motor vehicles and parts,Net trade,-713200.0
 2023,Yukon,Special transactions trade,Net trade,163700.0
-2024,Alberta,Aircraft and other transportation equipment and parts,Net trade,-556257300.0
-2024,Alberta,All sections,Net trade,136613146500.0
-2024,Alberta,"Basic and industrial chemical, plastic and rubber products",Net trade,-2391653800.0
-2024,Alberta,Consumer goods,Net trade,2827764900.0
-2024,Alberta,Electronic and electrical equipment and parts,Net trade,-205998400.0
-2024,Alberta,Energy products,Net trade,130540898600.0
-2024,Alberta,"Farm, fishing and intermediate food products",Net trade,3092770200.0
-2024,Alberta,Forestry products and building and packaging materials,Net trade,2737647100.0
-2024,Alberta,"Industrial machinery, equipment and parts",Net trade,640737800.0
-2024,Alberta,Metal and non-metallic mineral products,Net trade,418231100.0
-2024,Alberta,Metal ores and non-metallic minerals,Net trade,132752000.0
-2024,Alberta,Motor vehicles and parts,Net trade,-831093000.0
-2024,Alberta,Special transactions trade,Net trade,207347500.0
-2024,British Columbia,Aircraft and other transportation equipment and parts,Net trade,-626948300.0
-2024,British Columbia,All sections,Net trade,3479971800.0
-2024,British Columbia,"Basic and industrial chemical, plastic and rubber products",Net trade,-642476000.0
-2024,British Columbia,Consumer goods,Net trade,-1078966000.0
-2024,British Columbia,Electronic and electrical equipment and parts,Net trade,782683600.0
-2024,British Columbia,Energy products,Net trade,2713369700.0
-2024,British Columbia,"Farm, fishing and intermediate food products",Net trade,-440694100.0
-2024,British Columbia,Forestry products and building and packaging materials,Net trade,4507972500.0
-2024,British Columbia,"Industrial machinery, equipment and parts",Net trade,-679976300.0
-2024,British Columbia,Metal and non-metallic mineral products,Net trade,1854876400.0
-2024,British Columbia,Metal ores and non-metallic minerals,Net trade,-872987800.0
-2024,British Columbia,Motor vehicles and parts,Net trade,-2087558800.0
-2024,British Columbia,Special transactions trade,Net trade,50677100.0
-2024,Canada,Aircraft and other transportation equipment and parts,Net trade,4309160599.999998
-2024,Canada,All sections,Net trade,170848778400.0
-2024,Canada,"Basic and industrial chemical, plastic and rubber products",Net trade,-5923926200.0
-2024,Canada,Consumer goods,Net trade,8664259600.0
-2024,Canada,Electronic and electrical equipment and parts,Net trade,-5619907100.0
-2024,Canada,Energy products,Net trade,143603594300.0
-2024,Canada,"Farm, fishing and intermediate food products",Net trade,12699434200.0
-2024,Canada,Forestry products and building and packaging materials,Net trade,16088414000.0
-2024,Canada,"Industrial machinery, equipment and parts",Net trade,-9567277300.0
-2024,Canada,Metal and non-metallic mineral products,Net trade,23016189400.0
-2024,Canada,Metal ores and non-metallic minerals,Net trade,2129919200.0
-2024,Canada,Motor vehicles and parts,Net trade,-6346516600.0
-2024,Canada,Special transactions trade,Net trade,-12204565700.0
-2024,Manitoba,Aircraft and other transportation equipment and parts,Net trade,-1289273900.0
-2024,Manitoba,All sections,Net trade,-8495103200.0
-2024,Manitoba,"Basic and industrial chemical, plastic and rubber products",Net trade,-2921676300.0
-2024,Manitoba,Consumer goods,Net trade,730332900.0
-2024,Manitoba,Electronic and electrical equipment and parts,Net trade,-1166627000.0
-2024,Manitoba,Energy products,Net trade,944305400.0
-2024,Manitoba,"Farm, fishing and intermediate food products",Net trade,1894380000.0
-2024,Manitoba,Forestry products and building and packaging materials,Net trade,-637058300.0
-2024,Manitoba,"Industrial machinery, equipment and parts",Net trade,-3830915500.0
-2024,Manitoba,Metal and non-metallic mineral products,Net trade,-786570900.0
-2024,Manitoba,Metal ores and non-metallic minerals,Net trade,-266884400.0
-2024,Manitoba,Motor vehicles and parts,Net trade,-1378304100.0
-2024,Manitoba,Special transactions trade,Net trade,213188900.0
-2024,New Brunswick,Aircraft and other transportation equipment and parts,Net trade,-3440200.0
-2024,New Brunswick,All sections,Net trade,5674056700.0
-2024,New Brunswick,"Basic and industrial chemical, plastic and rubber products",Net trade,4582754500.0
-2024,New Brunswick,Consumer goods,Net trade,851464900.0
-2024,New Brunswick,Electronic and electrical equipment and parts,Net trade,-82155000.0
-2024,New Brunswick,Energy products,Net trade,-1360028000.0
-2024,New Brunswick,"Farm, fishing and intermediate food products",Net trade,765895600.0
-2024,New Brunswick,Forestry products and building and packaging materials,Net trade,1415960500.0
-2024,New Brunswick,"Industrial machinery, equipment and parts",Net trade,-180794400.0
-2024,New Brunswick,Metal and non-metallic mineral products,Net trade,-170078300.0
-2024,New Brunswick,Metal ores and non-metallic minerals,Net trade,116015900.0
-2024,New Brunswick,Motor vehicles and parts,Net trade,-309205800.0
-2024,New Brunswick,Special transactions trade,Net trade,47667100.0
-2024,Newfoundland and Labrador,Aircraft and other transportation equipment and parts,Net trade,-3137800.0
-2024,Newfoundland and Labrador,All sections,Net trade,5936375900.0
-2024,Newfoundland and Labrador,"Basic and industrial chemical, plastic and rubber products",Net trade,698043300.0
-2024,Newfoundland and Labrador,Consumer goods,Net trade,-54030400.0
-2024,Newfoundland and Labrador,Electronic and electrical equipment and parts,Net trade,5569400.0
-2024,Newfoundland and Labrador,Energy products,Net trade,4086026300.0
+2024,Alberta,Aircraft and other transportation equipment and parts,Net trade,-557748700.0
+2024,Alberta,All sections,Net trade,136592286700.0
+2024,Alberta,"Basic and industrial chemical, plastic and rubber products",Net trade,-2402592000.0
+2024,Alberta,Consumer goods,Net trade,2803554000.0
+2024,Alberta,Electronic and electrical equipment and parts,Net trade,-205525000.0
+2024,Alberta,Energy products,Net trade,130592579300.0
+2024,Alberta,"Farm, fishing and intermediate food products",Net trade,3090934100.0
+2024,Alberta,Forestry products and building and packaging materials,Net trade,2731802900.0
+2024,Alberta,"Industrial machinery, equipment and parts",Net trade,620962400.0
+2024,Alberta,Metal and non-metallic mineral products,Net trade,415804000.0
+2024,Alberta,Metal ores and non-metallic minerals,Net trade,132660300.0
+2024,Alberta,Motor vehicles and parts,Net trade,-836469500.0
+2024,Alberta,Special transactions trade,Net trade,206325200.0
+2024,British Columbia,Aircraft and other transportation equipment and parts,Net trade,-631718000.0
+2024,British Columbia,All sections,Net trade,3406211800.0
+2024,British Columbia,"Basic and industrial chemical, plastic and rubber products",Net trade,-648816500.0
+2024,British Columbia,Consumer goods,Net trade,-1109528700.0
+2024,British Columbia,Electronic and electrical equipment and parts,Net trade,770324600.0
+2024,British Columbia,Energy products,Net trade,2773384200.0
+2024,British Columbia,"Farm, fishing and intermediate food products",Net trade,-446465800.0
+2024,British Columbia,Forestry products and building and packaging materials,Net trade,4499459100.0
+2024,British Columbia,"Industrial machinery, equipment and parts",Net trade,-717053900.0
+2024,British Columbia,Metal and non-metallic mineral products,Net trade,1850151000.0
+2024,British Columbia,Metal ores and non-metallic minerals,Net trade,-873392500.0
+2024,British Columbia,Motor vehicles and parts,Net trade,-2101137600.0
+2024,British Columbia,Special transactions trade,Net trade,41006300.0
+2024,Canada,Aircraft and other transportation equipment and parts,Net trade,4147311399.999998
+2024,Canada,All sections,Net trade,171888501800.0
+2024,Canada,"Basic and industrial chemical, plastic and rubber products",Net trade,-6068604900.0
+2024,Canada,Consumer goods,Net trade,7845242900.0
+2024,Canada,Electronic and electrical equipment and parts,Net trade,-5756207100.0
+2024,Canada,Energy products,Net trade,143793816500.0
+2024,Canada,"Farm, fishing and intermediate food products",Net trade,12655564400.0
+2024,Canada,Forestry products and building and packaging materials,Net trade,15995852500.0
+2024,Canada,"Industrial machinery, equipment and parts",Net trade,-10047241600.0
+2024,Canada,Metal and non-metallic mineral products,Net trade,23239903800.0
+2024,Canada,Metal ores and non-metallic minerals,Net trade,2126975300.0
+2024,Canada,Motor vehicles and parts,Net trade,-6341878600.0
+2024,Canada,Special transactions trade,Net trade,-9702232900.0
+2024,Manitoba,Aircraft and other transportation equipment and parts,Net trade,-1294576100.0
+2024,Manitoba,All sections,Net trade,-8664013200.0
+2024,Manitoba,"Basic and industrial chemical, plastic and rubber products",Net trade,-2933206400.0
+2024,Manitoba,Consumer goods,Net trade,718510100.0
+2024,Manitoba,Electronic and electrical equipment and parts,Net trade,-1172955300.0
+2024,Manitoba,Energy products,Net trade,907495800.0
+2024,Manitoba,"Farm, fishing and intermediate food products",Net trade,1891231500.0
+2024,Manitoba,Forestry products and building and packaging materials,Net trade,-640773000.0
+2024,Manitoba,"Industrial machinery, equipment and parts",Net trade,-3892527200.0
+2024,Manitoba,Metal and non-metallic mineral products,Net trade,-794661800.0
+2024,Manitoba,Metal ores and non-metallic minerals,Net trade,-266946700.0
+2024,Manitoba,Motor vehicles and parts,Net trade,-1393697000.0
+2024,Manitoba,Special transactions trade,Net trade,208092900.0
+2024,New Brunswick,Aircraft and other transportation equipment and parts,Net trade,-3449100.0
+2024,New Brunswick,All sections,Net trade,5667840400.0
+2024,New Brunswick,"Basic and industrial chemical, plastic and rubber products",Net trade,4581391200.0
+2024,New Brunswick,Consumer goods,Net trade,847604800.0
+2024,New Brunswick,Electronic and electrical equipment and parts,Net trade,-82443200.0
+2024,New Brunswick,Energy products,Net trade,-1355908500.0
+2024,New Brunswick,"Farm, fishing and intermediate food products",Net trade,764820600.0
+2024,New Brunswick,Forestry products and building and packaging materials,Net trade,1413950000.0
+2024,New Brunswick,"Industrial machinery, equipment and parts",Net trade,-181935500.0
+2024,New Brunswick,Metal and non-metallic mineral products,Net trade,-170200600.0
+2024,New Brunswick,Metal ores and non-metallic minerals,Net trade,115994100.0
+2024,New Brunswick,Motor vehicles and parts,Net trade,-309552800.0
+2024,New Brunswick,Special transactions trade,Net trade,47569500.0
+2024,Newfoundland and Labrador,Aircraft and other transportation equipment and parts,Net trade,-3138400.0
+2024,Newfoundland and Labrador,All sections,Net trade,5937248600.0
+2024,Newfoundland and Labrador,"Basic and industrial chemical, plastic and rubber products",Net trade,698042300.0
+2024,Newfoundland and Labrador,Consumer goods,Net trade,-54034000.0
+2024,Newfoundland and Labrador,Electronic and electrical equipment and parts,Net trade,5567700.0
+2024,Newfoundland and Labrador,Energy products,Net trade,4087770700.0
 2024,Newfoundland and Labrador,"Farm, fishing and intermediate food products",Net trade,804868700.0
-2024,Newfoundland and Labrador,Forestry products and building and packaging materials,Net trade,36807700.0
-2024,Newfoundland and Labrador,"Industrial machinery, equipment and parts",Net trade,-1783500.0
-2024,Newfoundland and Labrador,Metal and non-metallic mineral products,Net trade,293045800.0
+2024,Newfoundland and Labrador,Forestry products and building and packaging materials,Net trade,36802900.0
+2024,Newfoundland and Labrador,"Industrial machinery, equipment and parts",Net trade,-1978500.0
+2024,Newfoundland and Labrador,Metal and non-metallic mineral products,Net trade,293033000.0
 2024,Newfoundland and Labrador,Metal ores and non-metallic minerals,Net trade,42507100.0
-2024,Newfoundland and Labrador,Motor vehicles and parts,Net trade,257800.0
-2024,Newfoundland and Labrador,Special transactions trade,Net trade,28201500.0
+2024,Newfoundland and Labrador,Motor vehicles and parts,Net trade,257500.0
+2024,Newfoundland and Labrador,Special transactions trade,Net trade,27549600.0
 2024,Northwest Territories,Aircraft and other transportation equipment and parts,Net trade,-8100.0
 2024,Northwest Territories,All sections,Net trade,-78337600.0
 2024,Northwest Territories,"Basic and industrial chemical, plastic and rubber products",Net trade,-2700.0
@@ -5915,18 +5915,18 @@ YEAR,GEO,CATEGORY,TRADE,VALUE
 2024,Northwest Territories,Motor vehicles and parts,Net trade,-1500.0
 2024,Northwest Territories,Special transactions trade,Net trade,253100.0
 2024,Nova Scotia,Aircraft and other transportation equipment and parts,Net trade,-30353600.0
-2024,Nova Scotia,All sections,Net trade,4075268900.0
-2024,Nova Scotia,"Basic and industrial chemical, plastic and rubber products",Net trade,202992400.0
-2024,Nova Scotia,Consumer goods,Net trade,601302800.0
+2024,Nova Scotia,All sections,Net trade,4071729000.0
+2024,Nova Scotia,"Basic and industrial chemical, plastic and rubber products",Net trade,202916700.0
+2024,Nova Scotia,Consumer goods,Net trade,600976200.0
 2024,Nova Scotia,Electronic and electrical equipment and parts,Net trade,183298500.0
-2024,Nova Scotia,Energy products,Net trade,-262071300.0
+2024,Nova Scotia,Energy products,Net trade,-262105100.0
 2024,Nova Scotia,"Farm, fishing and intermediate food products",Net trade,952661100.0
-2024,Nova Scotia,Forestry products and building and packaging materials,Net trade,558705100.0
-2024,Nova Scotia,"Industrial machinery, equipment and parts",Net trade,80479100.0
-2024,Nova Scotia,Metal and non-metallic mineral products,Net trade,92856200.0
+2024,Nova Scotia,Forestry products and building and packaging materials,Net trade,558704800.0
+2024,Nova Scotia,"Industrial machinery, equipment and parts",Net trade,77506700.0
+2024,Nova Scotia,Metal and non-metallic mineral products,Net trade,92854100.0
 2024,Nova Scotia,Metal ores and non-metallic minerals,Net trade,117347100.0
-2024,Nova Scotia,Motor vehicles and parts,Net trade,1526142300.0
-2024,Nova Scotia,Special transactions trade,Net trade,51909300.0
+2024,Nova Scotia,Motor vehicles and parts,Net trade,1526105900.0
+2024,Nova Scotia,Special transactions trade,Net trade,51816600.0
 2024,Nunavut,Aircraft and other transportation equipment and parts,Net trade,0.0
 2024,Nunavut,All sections,Net trade,-60141400.0
 2024,Nunavut,"Basic and industrial chemical, plastic and rubber products",Net trade,24900.0
@@ -5940,68 +5940,68 @@ YEAR,GEO,CATEGORY,TRADE,VALUE
 2024,Nunavut,Metal ores and non-metallic minerals,Net trade,74600.0
 2024,Nunavut,Motor vehicles and parts,Net trade,0.0
 2024,Nunavut,Special transactions trade,Net trade,252900.0
-2024,Ontario,Aircraft and other transportation equipment and parts,Net trade,-732315400.0
-2024,Ontario,All sections,Net trade,-48520375000.0
-2024,Ontario,"Basic and industrial chemical, plastic and rubber products",Net trade,-6328798000.0
-2024,Ontario,Consumer goods,Net trade,-6977537700.0
-2024,Ontario,Electronic and electrical equipment and parts,Net trade,-6241029300.0
-2024,Ontario,Energy products,Net trade,-3680291000.0
-2024,Ontario,"Farm, fishing and intermediate food products",Net trade,-1278723000.0
-2024,Ontario,Forestry products and building and packaging materials,Net trade,-2104928000.0
-2024,Ontario,"Industrial machinery, equipment and parts",Net trade,-4687238300.0
-2024,Ontario,Metal and non-metallic mineral products,Net trade,2240796200.0
-2024,Ontario,Metal ores and non-metallic minerals,Net trade,-2325110700.0
-2024,Ontario,Motor vehicles and parts,Net trade,-3527197599.9999924
-2024,Ontario,Special transactions trade,Net trade,-12878002100.0
+2024,Ontario,Aircraft and other transportation equipment and parts,Net trade,-745413800.0
+2024,Ontario,All sections,Net trade,-46892926800.0
+2024,Ontario,"Basic and industrial chemical, plastic and rubber products",Net trade,-6415593600.0
+2024,Ontario,Consumer goods,Net trade,-7682489500.0
+2024,Ontario,Electronic and electrical equipment and parts,Net trade,-6309194200.0
+2024,Ontario,Energy products,Net trade,-3634316300.0
+2024,Ontario,"Farm, fishing and intermediate food products",Net trade,-1307457100.0
+2024,Ontario,Forestry products and building and packaging materials,Net trade,-2166004400.0
+2024,Ontario,"Industrial machinery, equipment and parts",Net trade,-5000597700.0
+2024,Ontario,Metal and non-metallic mineral products,Net trade,2499603200.0
+2024,Ontario,Metal ores and non-metallic minerals,Net trade,-2327392900.0
+2024,Ontario,Motor vehicles and parts,Net trade,-3470449400.0000076
+2024,Ontario,Special transactions trade,Net trade,-10333621000.0
 2024,Prince Edward Island,Aircraft and other transportation equipment and parts,Net trade,121921700.0
-2024,Prince Edward Island,All sections,Net trade,1871398600.0
-2024,Prince Edward Island,"Basic and industrial chemical, plastic and rubber products",Net trade,-1130800.0
-2024,Prince Edward Island,Consumer goods,Net trade,954191300.0
-2024,Prince Edward Island,Electronic and electrical equipment and parts,Net trade,6692900.0
+2024,Prince Edward Island,All sections,Net trade,1871382100.0
+2024,Prince Edward Island,"Basic and industrial chemical, plastic and rubber products",Net trade,-1136500.0
+2024,Prince Edward Island,Consumer goods,Net trade,954185400.0
+2024,Prince Edward Island,Electronic and electrical equipment and parts,Net trade,6690200.0
 2024,Prince Edward Island,Energy products,Net trade,0.0
 2024,Prince Edward Island,"Farm, fishing and intermediate food products",Net trade,448760400.0
-2024,Prince Edward Island,Forestry products and building and packaging materials,Net trade,52138800.0
+2024,Prince Edward Island,Forestry products and building and packaging materials,Net trade,52137100.0
 2024,Prince Edward Island,"Industrial machinery, equipment and parts",Net trade,31548800.0
-2024,Prince Edward Island,Metal and non-metallic mineral products,Net trade,3233700.0
+2024,Prince Edward Island,Metal and non-metallic mineral products,Net trade,3233300.0
 2024,Prince Edward Island,Metal ores and non-metallic minerals,Net trade,924500.0
 2024,Prince Edward Island,Motor vehicles and parts,Net trade,15173400.0
 2024,Prince Edward Island,Special transactions trade,Net trade,237943800.0
-2024,Quebec,Aircraft and other transportation equipment and parts,Net trade,7710227300.0
-2024,Quebec,All sections,Net trade,56823079200.0
-2024,Quebec,"Basic and industrial chemical, plastic and rubber products",Net trade,2860138800.0
-2024,Quebec,Consumer goods,Net trade,11657592700.0
-2024,Quebec,Electronic and electrical equipment and parts,Net trade,1604187600.0
-2024,Quebec,Energy products,Net trade,-3419394200.0
-2024,Quebec,"Farm, fishing and intermediate food products",Net trade,1608874600.0
-2024,Quebec,Forestry products and building and packaging materials,Net trade,9609201100.0
-2024,Quebec,"Industrial machinery, equipment and parts",Net trade,3377577300.0
-2024,Quebec,Metal and non-metallic mineral products,Net trade,19225905600.0
-2024,Quebec,Metal ores and non-metallic minerals,Net trade,854887000.0
-2024,Quebec,Motor vehicles and parts,Net trade,1950326200.0
-2024,Quebec,Special transactions trade,Net trade,-216444800.0
-2024,Saskatchewan,Aircraft and other transportation equipment and parts,Net trade,-279824500.0
-2024,Saskatchewan,All sections,Net trade,13445998600.0
-2024,Saskatchewan,"Basic and industrial chemical, plastic and rubber products",Net trade,-1982172200.0
-2024,Saskatchewan,Consumer goods,Net trade,-849641900.0
-2024,Saskatchewan,Electronic and electrical equipment and parts,Net trade,-503306000.0
-2024,Saskatchewan,Energy products,Net trade,14180306000.0
-2024,Saskatchewan,"Farm, fishing and intermediate food products",Net trade,4887066200.0
-2024,Saskatchewan,Forestry products and building and packaging materials,Net trade,-89505600.0
-2024,Saskatchewan,"Industrial machinery, equipment and parts",Net trade,-4300480800.0
-2024,Saskatchewan,Metal and non-metallic mineral products,Net trade,-160965500.0
+2024,Quebec,Aircraft and other transportation equipment and parts,Net trade,7575746100.0
+2024,Quebec,All sections,Net trade,56543470300.0
+2024,Quebec,"Basic and industrial chemical, plastic and rubber products",Net trade,2834354000.0
+2024,Quebec,Consumer goods,Net trade,11619142400.0
+2024,Quebec,Electronic and electrical equipment and parts,Net trade,1557500700.0
+2024,Quebec,Energy products,Net trade,-3374063500.0
+2024,Quebec,"Farm, fishing and intermediate food products",Net trade,1607846800.0
+2024,Quebec,Forestry products and building and packaging materials,Net trade,9601104200.0
+2024,Quebec,"Industrial machinery, equipment and parts",Net trade,3353861100.0
+2024,Quebec,Metal and non-metallic mineral products,Net trade,19216690200.0
+2024,Quebec,Metal ores and non-metallic minerals,Net trade,854805900.0
+2024,Quebec,Motor vehicles and parts,Net trade,1937619000.0
+2024,Quebec,Special transactions trade,Net trade,-241136300.0
+2024,Saskatchewan,Aircraft and other transportation equipment and parts,Net trade,-282521100.0
+2024,Saskatchewan,All sections,Net trade,13410595900.0
+2024,Saskatchewan,"Basic and industrial chemical, plastic and rubber products",Net trade,-1984015800.0
+2024,Saskatchewan,Consumer goods,Net trade,-854463800.0
+2024,Saskatchewan,Electronic and electrical equipment and parts,Net trade,-506247500.0
+2024,Saskatchewan,Energy products,Net trade,14198507200.0
+2024,Saskatchewan,"Farm, fishing and intermediate food products",Net trade,4884789600.0
+2024,Saskatchewan,Forestry products and building and packaging materials,Net trade,-92804100.0
+2024,Saskatchewan,"Industrial machinery, equipment and parts",Net trade,-4320582800.0
+2024,Saskatchewan,Metal and non-metallic mineral products,Net trade,-171461900.0
 2024,Saskatchewan,Metal ores and non-metallic minerals,Net trade,4199418800.0
-2024,Saskatchewan,Motor vehicles and parts,Net trade,-1707163900.0
-2024,Saskatchewan,Special transactions trade,Net trade,52268000.0
+2024,Saskatchewan,Motor vehicles and parts,Net trade,-1711565100.0
+2024,Saskatchewan,Special transactions trade,Net trade,51542500.0
 2024,Yukon,Aircraft and other transportation equipment and parts,Net trade,-1429300.0
-2024,Yukon,All sections,Net trade,83439400.0
+2024,Yukon,All sections,Net trade,83155900.0
 2024,Yukon,"Basic and industrial chemical, plastic and rubber products",Net trade,29600.0
 2024,Yukon,Consumer goods,Net trade,1539500.0
 2024,Yukon,Electronic and electrical equipment and parts,Net trade,-3141800.0
 2024,Yukon,Energy products,Net trade,104100.0
 2024,Yukon,"Farm, fishing and intermediate food products",Net trade,-36425500.0
 2024,Yukon,Forestry products and building and packaging materials,Net trade,1474200.0
-2024,Yukon,"Industrial machinery, equipment and parts",Net trade,-16457799.999999998
+2024,Yukon,"Industrial machinery, equipment and parts",Net trade,-16471400.0
 2024,Yukon,Metal and non-metallic mineral products,Net trade,4490600.0
 2024,Yukon,Metal ores and non-metallic minerals,Net trade,130975000.0
-2024,Yukon,Motor vehicles and parts,Net trade,2108600.0
+2024,Yukon,Motor vehicles and parts,Net trade,1838600.0
 2024,Yukon,Special transactions trade,Net trade,172200.0
