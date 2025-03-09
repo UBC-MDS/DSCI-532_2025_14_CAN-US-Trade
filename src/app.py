@@ -9,15 +9,19 @@ import dash_bootstrap_components as dbc
 
 # Import necessary modules
 if "RENDER" in os.environ:
-    from src import callbacks  # Ensure correct import path
+    from src import callbacks
+    from src.components import (
+        header, overview_map, summary_container, trade_composition, 
+        trade_trend, sidebar
+    )
+    from src.data import *
 else:
-    import callbacks  # Ensure correct import path
-
-from components import (
-    header, overview_map, summary_container, trade_composition, 
-    trade_trend, sidebar
-)
-from data import *
+    import callbacks
+    from components import (
+        header, overview_map, summary_container, trade_composition, 
+        trade_trend, sidebar
+    )
+    from data import *
 
 # Initialize Dash app with Bootstrap for styling
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
