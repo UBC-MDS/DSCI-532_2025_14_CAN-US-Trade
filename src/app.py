@@ -3,11 +3,15 @@
 # author: Elshaday Yoseph
 # date: 2025-02-28
 
-
+import os
 from dash import Dash
 import dash_bootstrap_components as dbc
 
-import callbacks
+if "RENDER" in os.environ:
+    import src.callbacks
+else:
+    import callbacks
+
 from components import (
     header, overview_map, summary_container, trade_composition, 
     trade_trend, sidebar
