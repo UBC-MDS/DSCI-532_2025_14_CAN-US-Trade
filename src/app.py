@@ -7,7 +7,11 @@ import os
 from dash import Dash
 import dash_bootstrap_components as dbc
 
-import callbacks
+# Import necessary modules
+if "RENDER" in os.environ:
+    from src import callbacks  # Ensure correct import path
+else:
+    import callbacks  # Ensure correct import path
 
 from components import (
     header, overview_map, summary_container, trade_composition, 
