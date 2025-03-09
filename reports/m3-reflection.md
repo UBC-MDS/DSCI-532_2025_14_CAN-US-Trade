@@ -65,15 +65,16 @@ Future improvements:
 
 ## Get Inspiration from Your Peers (Challenging)
 
-Inspiration from Group 22 (NYC Arrest Tracker): 
+Inspiration from Group 22 (NYC Arrest Tracker):
 
 - They used pie charts to illustrate the composition of crime types, arrests by gender, etc.  
 - This approach makes it more intuitive to highlight key sections that contribute to the overall picture.
 
 What we changed:
 
-- We replaced our bar chart (which shows composition of goods and services) with a treemap that better represents categories and their relative proportions. 
+- We replaced our bar chart (which shows composition of goods and services) with a treemap that better represents categories and their relative proportions.
 
 How it improves our dashboard:
+
 - We can use it to highlight the major categories of goods that make up Canada's and its provinces' exports and imports.
 - A proportional visualization makes the data more straightforward and interpretable.
