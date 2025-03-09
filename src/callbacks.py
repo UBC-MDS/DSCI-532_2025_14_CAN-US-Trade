@@ -13,11 +13,13 @@ if "RENDER" in os.environ:
     from src.summary import create_summary_component
     from src.trend_graph import create_trend_graph
     from src.composition_figure import create_composition_figure
+    from src.data import *
 else:
     from trade_map import create_trade_map
     from summary import create_summary_component
     from trend_graph import create_trend_graph
     from composition_figure import create_composition_figure
+    from data import *
 
 # Callback to update the trade map
 @callback(

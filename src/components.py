@@ -2,11 +2,15 @@
 # author: Danish Karlin Isa
 # date: 2025-03-08
 
+import os
 import dash_vega_components as dvc
 import dash_bootstrap_components as dbc
 from dash import html, dcc, dash_table
 
-from data import *
+if "RENDER" in os.environ:
+    from src.data import *
+else:
+    from data import *
 
 header = html.Div([
     html.H1("CAN-US Trade Relations Dashboard", className="text-center", 
