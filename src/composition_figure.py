@@ -2,12 +2,17 @@
 # # author: Danish Karlin Isa
 # # date: 2025-02-28
 
+import os
 import pandas as pd
 import plotly.express as px
 
+if "RENDER" in os.environ:
+    from src.data import *
+else:
+    from data import *
+
 def create_composition_figure(year_filter=2024, geo_filter='Canada', trade_filter='Net trade'):
-    DATA_FROM = "data/clean/clean.csv"
-    data = pd.read_csv(DATA_FROM)
+    data = df.copy()
 
     # Filter the data
     filtered_data = data[
@@ -17,9 +22,9 @@ def create_composition_figure(year_filter=2024, geo_filter='Canada', trade_filte
         (data['TRADE'] == trade_filter)
     ]
 
-    filtered_data["CATEGORY"] = filtered_data["CATEGORY"].apply(lambda x: x.replace(" ", "<br>"))
+    filtered_data["CATEGORY"] = filtered_data["CATEGORY"].str.replace(" ", "<br>")
     filtered_data["VALUE"] = filtered_data["VALUE"].abs()  # Convert negative numbers to positive
-    filtered_data["VALUE_LABEL"] = filtered_data["VALUE"].apply(lambda x: f"${x:,.0f}")
+    filtered_data["VALUE_LABEL"] = filtered_data["VALUE"].map("${:,.0f}".format)
 
     # Create treemap
     fig = px.treemap(

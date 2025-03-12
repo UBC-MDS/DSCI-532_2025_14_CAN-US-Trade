@@ -1,12 +1,13 @@
+import os
 import pandas as pd
 from dash import html
 import dash_bootstrap_components as dbc
 
-# File path for cleaned trade data
-CLEAN_DATA_PATH = "data/clean/clean.csv"
+if "RENDER" in os.environ:
+    from src.data import *
+else:
+    from data import *
 
-HEADER_BG_COLOR = "#0B3D91"  # Same as header background
-TEXT_COLOR = "black"  # Black text for better contrast on white cards
 
 def generate_summary(year=2024, geo_filter="Canada", category="All sections"):
     """
@@ -20,24 +21,24 @@ def generate_summary(year=2024, geo_filter="Canada", category="All sections"):
     Returns:
         dict: A dictionary containing net trade balance, exports, and imports.
     """
-    df = pd.read_csv(CLEAN_DATA_PATH)
+    data = df.copy()
 
     # Ensure correct filtering logic
-    df = df[df["YEAR"] == year]
+    data = data[data["YEAR"] == year]
     if geo_filter == "Canada":
-        df = df[df["GEO"] == "Canada"]
+        data = data[data["GEO"] == "Canada"]
     else:
-        df = df[df["GEO"] == geo_filter]
+        data = data[data["GEO"] == geo_filter]
 
     if category == "All sections":
-        df = df[df["CATEGORY"] == "All sections"]
+        data = data[data["CATEGORY"] == "All sections"]
     else:
-        df = df[df["CATEGORY"] == category]
+        data = data[data["CATEGORY"] == category]
 
     # Fetch the correct trade values
-    exports = df[df["TRADE"] == "Export"]["VALUE"].values[0]
-    imports = df[df["TRADE"] == "Import"]["VALUE"].values[0]
-    net_trade = df[df["TRADE"] == "Net trade"]["VALUE"].values[0]
+    exports = data[data["TRADE"] == "Export"]["VALUE"].values[0]
+    imports = data[data["TRADE"] == "Import"]["VALUE"].values[0]
+    net_trade = data[data["TRADE"] == "Net trade"]["VALUE"].values[0]
 
     return {"exports": exports, "imports": imports, "net_trade": net_trade}
 
