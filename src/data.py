@@ -3,6 +3,7 @@
 # date: 2025-03-08
 
 import pandas as pd
+import geopandas as gpd
 
 # Download data
 try:
@@ -34,6 +35,7 @@ try:
 
     tidy_data = tidy_data.rename(new_col_names, axis=1)
     tidy_data = tidy_data[["YEAR", "GEO", "CATEGORY", "TRADE", "VALUE"]]
+    tidy_data["GEO"] = tidy_data["GEO"].replace({"Quebec": "Québec"})  
     tidy_data["CATEGORY"] = [each[:-6] if each != 'All sections' else each for each in tidy_data["CATEGORY"]]
     tidy_data["VALUE"] *= 1e3
 
@@ -61,7 +63,20 @@ unique_provinces = ["Canada"] + sorted([geo for geo in df["GEO"].unique() if geo
 unique_categories = ["All sections"] + sorted([cat for cat in df["CATEGORY"].dropna().unique() if cat != "All sections"])
 unique_trade_types = sorted(df["TRADE"].unique())  
 unique_trade_types = ["Net trade"] + sorted([trade for trade in df["TRADE"].unique() if trade != "Net trade"])
+
 # Define color scheme
 HEADER_BG_COLOR = "#343A40"  # Dark grey for header
 SIDEBAR_BG_COLOR = "#FFFFF"
 TEXT_COLOR = "black"
+
+# province data
+try:
+    GEOJSON_URL = "https://naciscdn.org/naturalearth/50m/cultural/ne_50m_admin_1_states_provinces.zip"
+    provinces = gpd.read_file(GEOJSON_URL)
+    provinces.to_file('data/raw/provinces.shp')
+
+    canadian_provinces = provinces[provinces["iso_a2"] == "CA"]
+    canadian_provinces.to_file('data/clean/canadian_provinces.shp')
+
+except:
+    canadian_provinces = gpd.read_file('data/clean/canadian_provinces.shp')
