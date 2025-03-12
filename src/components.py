@@ -12,6 +12,10 @@ if "RENDER" in os.environ:
 else:
     from data import *
 
+def truncate_text(text, max_length=25):
+    """Truncate text to max_length and add '...' if it's longer"""
+    return text if len(text) <= max_length else text[:max_length] + "..."
+
 header = html.Div([
     html.H1("CAN-US Trade Relations Dashboard", className="text-center", 
             style={"color": "white", "padding": "15px"})
@@ -24,6 +28,7 @@ sidebar = dbc.Col([
         id="province-dropdown",
         options=[{"label": geo, "value": geo} for geo in unique_provinces],
         value="Canada",
+        clearable=False, 
         className="mb-3"
     ),
 
@@ -32,6 +37,7 @@ sidebar = dbc.Col([
         id="year-dropdown",
         options=[{"label": str(y), "value": y} for y in unique_years],
         value=unique_years[0],
+        clearable=False, 
         className="mb-3"
     ),
 
@@ -39,18 +45,23 @@ sidebar = dbc.Col([
     dcc.Dropdown(
         id="trade-type-dropdown",
         options=[{"label": trade, "value": trade} for trade in unique_trade_types],
-        value="Export",
+        value="Net trade",
+        clearable=False, 
         className="mb-3"
     ),
 
     html.Label("Goods and Services:", style={"color": TEXT_COLOR}),
     dcc.Dropdown(
         id="goods-dropdown",
-        options=[{"label": cat, "value": cat} for cat in unique_categories],
+        options=[{"label": cat, "value": cat, "title": cat, "label": truncate_text(cat, 25)} for cat in unique_categories],
         value="All sections",
-        className="mb-3"
+        clearable=False, 
+        className="mb-3",
+        style={
+        "whiteSpace": "nowrap",
+        "textOverflow": "ellipsis",
+    }
     ),
-
     html.Hr(style={"border-top": "1px solid white"}),
     html.P(
         "This Dash application provides an interactive dashboard for visualizing trade relations between Canada and the US",

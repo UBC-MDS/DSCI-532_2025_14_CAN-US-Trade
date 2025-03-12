@@ -1,3 +1,7 @@
+# file: trade_map.py
+# author: Elshaday Yoseph
+# date: 2025-03-08
+
 import geopandas as gpd
 import pandas as pd
 import altair as alt
@@ -26,10 +30,8 @@ def create_trade_map(year, trade_type, category, geo_filter):
     Returns:
         alt.Chart: Altair choropleth map visualization.
     """
+      
     df = pd.read_csv(CLEAN_DATA_PATH)
-    
-    # Convert YEAR to integer
-    #df["YEAR"] = pd.to_datetime(df["YEAR"]).dt.year
 
     # Normalize province names for consistency
     df["GEO"] = df["GEO"].replace({"Quebec": "Québec"})  
@@ -47,62 +49,80 @@ def create_trade_map(year, trade_type, category, geo_filter):
     provinces = gpd.read_file(GEOJSON_URL)
     canadian_provinces = provinces[provinces["iso_a2"] == "CA"]
 
-    # Filter map for a specific province if selected
-    if geo_filter != "Canada":
-        df = df[df["GEO"] == geo_filter]
-        canadian_provinces = canadian_provinces[canadian_provinces["name"] == geo_filter]
-
-    # Merge trade data with geospatial data
+    # Merge trade data with geospatial data (keep all provinces)
     merged = canadian_provinces.merge(df, left_on="name", right_on="GEO", how="left")
 
-    # Handle missing values and log transform trade values
-    if(trade_type == "Import"):
-        merged["VALUE"] = -1* merged["VALUE"].fillna(1e-3)
-    else:
-        merged["VALUE"] = merged["VALUE"].fillna(1e-3)
-    merged = merged[merged["VALUE"] > 0]
-    merged["LOG_VALUE"] = np.log10(merged["VALUE"])
+    # Ensure trade values exist (fill NaN with 0)
+    merged["VALUE"] = merged["VALUE"].fillna(0)
 
-    # Define color scale range based on percentiles
-    q1, q99 = merged["LOG_VALUE"].quantile([0.01, 0.99])
-    scale_domain = [q1, q99]
+    # Fix Import Values: Keep them as positive numbers
+    if trade_type == "Import":
+        merged["VALUE"] = merged["VALUE"].abs()  # Convert negative imports to positive
+
+    # Ensure log transformation doesn't remove zeros
+    merged["LOG_VALUE"] = np.sign(merged["VALUE"]) * np.log10(np.abs(merged["VALUE"]) + 1)
+
+
+
+    # Apply Province Filtering *AFTER* merging
+    if geo_filter != "Canada":
+        merged = merged[merged["name"] == geo_filter]
+
+    # Define color scales based on trade type
+    if trade_type == "Net trade":
+        max_val = max(abs(merged["LOG_VALUE"].min()), abs(merged["LOG_VALUE"].max()))  # Symmetric range
+        color_scale = alt.Scale(
+            domain=[-max_val, 0, max_val],  # Ensures balance between red & green
+            range=["red", "white", "green"]  # Red for deficit, white for neutral, green for surplus
+    )
+
+
+    elif trade_type == "Import":
+        color_scale = alt.Scale(
+            domain=[merged["LOG_VALUE"].min(), merged["LOG_VALUE"].max()],
+            scheme="blues"  # Use a blue scale for imports
+        )
+    elif trade_type == "Export":
+        color_scale = alt.Scale(
+            domain=[merged["LOG_VALUE"].min(), merged["LOG_VALUE"].max()],
+            scheme="greens"  # Use a green scale for exports
+        )
+
+
 
     # Define hover interaction
     hover = alt.selection_point(fields=["name"], on="mouseover", empty="none")
 
     # Construct the Altair choropleth map
     trade_map = (
-        alt.Chart(merged)
-        .mark_geoshape(stroke="white")
-        .project("transverseMercator", rotate=[90, 0, 0])
-        .encode(
-            color=alt.Color(
-                "LOG_VALUE:Q", 
-                scale=alt.Scale(type="log", scheme="viridis", domain=scale_domain, clamp=True), 
-                legend=alt.Legend(
-                    title="Trade Value (CAD, Log10 Scale)", 
-                    orient="right",
-                    format=".2f"
-                )
-            ),
-            stroke=alt.condition(hover, alt.value("black"), alt.value("white")),
-            strokeWidth=alt.condition(hover, alt.value(3), alt.value(1)),
-            tooltip=[
-                "GEO:N", 
-                alt.Tooltip("VALUE:Q", format=",.0f"),
-                "CATEGORY:N"
-            ]
-        )
-        .add_params(hover)
-        .properties(
-            width=500,  # Increased width for better visibility
-            height=320,  # Increased height for better proportion
-            title=alt.TitleParams(
-                f"Trade Flow: {trade_type} in {year} ({category})",
-                fontSize=20,
-                fontWeight="bold"
-            )
+    alt.Chart(merged)
+    .mark_geoshape(stroke="black")  # Keep borders for all provinces
+    .project("transverseMercator", rotate=[90, 0, 0])
+    .encode(
+        color=alt.Color(
+            "LOG_VALUE:Q", 
+            scale=color_scale, 
+            legend=alt.Legend(title="Trade Value (CAD, Log10 Scale)")
+        ),
+        stroke=alt.value("black"),
+        strokeWidth=alt.value(1),
+        tooltip=[
+            "GEO:N", 
+            alt.Tooltip("VALUE:Q", format=",.0f", title="Trade Value (CAD)"),
+            "CATEGORY:N"
+        ]
+    )
+    .add_params(hover)
+    .properties(
+        width=500,
+        height=320,
+        title=alt.TitleParams(
+            f"Trade Flow: {trade_type} in {year} ({category})",
+            fontSize=20,
+            fontWeight="bold"
         )
     )
+)
+
 
     return trade_map

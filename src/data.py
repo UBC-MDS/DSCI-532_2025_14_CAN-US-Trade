@@ -58,9 +58,9 @@ except:
 # Extract unique values for dropdown options
 unique_years = sorted(df["YEAR"].unique(), reverse=True)
 unique_provinces = ["Canada"] + sorted([geo for geo in df["GEO"].unique() if geo != "Canada"])
-unique_categories = sorted(df["CATEGORY"].dropna().unique())
+unique_categories = ["All sections"] + sorted([cat for cat in df["CATEGORY"].dropna().unique() if cat != "All sections"])
 unique_trade_types = sorted(df["TRADE"].unique())  
-
+unique_trade_types = ["Net trade"] + sorted([trade for trade in df["TRADE"].unique() if trade != "Net trade"])
 # Define color scheme
 HEADER_BG_COLOR = "#343A40"  # Dark grey for header
 SIDEBAR_BG_COLOR = "#FFFFF"
