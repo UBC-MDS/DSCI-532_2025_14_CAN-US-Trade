@@ -22,5 +22,6 @@ dependencies:
     - requests
     - gunicorn  # Needed for Render deployment
     - pip
+    - pyarrow
     - pip:
         - dash-vega-components
