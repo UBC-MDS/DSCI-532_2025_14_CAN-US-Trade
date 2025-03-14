@@ -80,3 +80,10 @@ try:
 
 except:
     canadian_provinces = gpd.read_file('data/clean/canadian_provinces.shp')
+
+# Default selections
+DEFAULT_PROVINCE = "Canada"
+DEFAULT_YEAR = unique_years[0]
+DEFAULT_TRADE = "Net trade"
+DEFAULT_GOODS = "All sections"
+DEFAULT_N_CLICKS = 0
