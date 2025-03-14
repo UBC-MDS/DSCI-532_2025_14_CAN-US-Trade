@@ -27,7 +27,7 @@ sidebar = dbc.Col([
     dcc.Dropdown(
         id="province-dropdown",
         options=[{"label": geo, "value": geo} for geo in unique_provinces],
-        value="Canada",
+        value=DEFAULT_PROVINCE,
         clearable=False, 
         className="mb-3"
     ),
@@ -36,7 +36,7 @@ sidebar = dbc.Col([
     dcc.Dropdown(
         id="year-dropdown",
         options=[{"label": str(y), "value": y} for y in unique_years],
-        value=unique_years[0],
+        value=DEFAULT_YEAR,
         clearable=False, 
         className="mb-3"
     ),
@@ -45,7 +45,7 @@ sidebar = dbc.Col([
     dcc.Dropdown(
         id="trade-type-dropdown",
         options=[{"label": trade, "value": trade} for trade in unique_trade_types],
-        value="Net trade",
+        value=DEFAULT_TRADE,
         clearable=False, 
         className="mb-3"
     ),
@@ -54,7 +54,7 @@ sidebar = dbc.Col([
     dcc.Dropdown(
         id="goods-dropdown",
         options=[{"label": cat, "value": cat, "title": cat, "label": truncate_text(cat, 25)} for cat in unique_categories],
-        value="All sections",
+        value=DEFAULT_GOODS,
         clearable=False, 
         className="mb-3",
         style={
@@ -67,7 +67,7 @@ sidebar = dbc.Col([
         dbc.Button('Reset selection', 
                    color="secondary",
                    id='reset-button', 
-                   n_clicks=0)
+                   n_clicks=1)
     ),
 
     html.Hr(style={"border-top": "1px solid white"}),
