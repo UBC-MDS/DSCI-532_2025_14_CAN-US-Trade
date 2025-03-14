@@ -79,7 +79,7 @@ try:
     provinces = gpd.read_file(GEOJSON_URL)
     provinces.to_file('data/raw/provinces.shp')
 
-    canadian_provinces = provinces[provinces["iso_a2"] == "CA"]
+    canadian_provinces = provinces[provinces["iso_a2"] == "CA"][['name', 'geometry']]
     canadian_provinces.to_file('data/clean/canadian_provinces.shp')
 
 except:
