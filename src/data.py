@@ -75,12 +75,18 @@ TEXT_COLOR = "black"
 
 # province data
 try:
+    canadian_provinces = gpd.read_parquet('data/clean/canadian_provinces.parquet')
+
+    expected_colnames = ['name', 'geometry']
+
+    if canadian_provinces.columns.to_list() != expected_colnames:
+        raise RuntimeError('canadian_provinces.parquet is corrupted.')
+    
+except:
     GEOJSON_URL = "https://naciscdn.org/naturalearth/50m/cultural/ne_50m_admin_1_states_provinces.zip"
     provinces = gpd.read_file(GEOJSON_URL)
     provinces.to_file('data/raw/provinces.shp')
 
     canadian_provinces = provinces[provinces["iso_a2"] == "CA"][['name', 'geometry']]
     canadian_provinces.to_file('data/clean/canadian_provinces.shp')
-
-except:
-    canadian_provinces = gpd.read_file('data/clean/canadian_provinces.shp')
+    canadian_provinces.to_parquet('data/clean/canadian_provinces.parquet')
