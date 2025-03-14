@@ -13,9 +13,13 @@ import pyproj
 if "PROJ_LIB" not in os.environ:
     os.environ["PROJ_LIB"] = pyproj.datadir.get_data_dir()
 
+if "RENDER" in os.environ:
+    from src.data import *
+else:
+    from data import *
+
 # File paths
-CLEAN_DATA_PATH = "data/clean/clean.csv"
-GEOJSON_URL = "https://naciscdn.org/naturalearth/50m/cultural/ne_50m_admin_1_states_provinces.zip"
+# CLEAN_DATA_PATH = "data/clean/clean.csv"
 
 def create_trade_map(year, trade_type, category, geo_filter):
     """
@@ -31,26 +35,21 @@ def create_trade_map(year, trade_type, category, geo_filter):
         alt.Chart: Altair choropleth map visualization.
     """
       
-    df = pd.read_csv(CLEAN_DATA_PATH)
+    data = df.copy()
 
     # Normalize province names for consistency
-    df["GEO"] = df["GEO"].replace({"Quebec": "Québec"})  
     geo_filter = "Québec" if geo_filter == "Quebec" else geo_filter  
 
     # Standardize category filtering
-    df["CATEGORY"] = df["CATEGORY"].str.strip().str.lower()
+    data["CATEGORY"] = data["CATEGORY"].str.strip().str.lower()
     category = category.strip().lower()
 
     # Filter data based on selections
-    df = df[(df["YEAR"] == year) & (df["TRADE"] == trade_type)]
-    df = df[df["CATEGORY"] == category]
-
-    # Load Canadian provinces' geospatial data
-    provinces = gpd.read_file(GEOJSON_URL)
-    canadian_provinces = provinces[provinces["iso_a2"] == "CA"]
+    data = data[(data["YEAR"] == year) & (data["TRADE"] == trade_type)]
+    data = data[data["CATEGORY"] == category]
 
     # Merge trade data with geospatial data (keep all provinces)
-    merged = canadian_provinces.merge(df, left_on="name", right_on="GEO", how="left")
+    merged = canadian_provinces.merge(data, left_on="name", right_on="GEO", how="left")
 
     # Ensure trade values exist (fill NaN with 0)
     merged["VALUE"] = merged["VALUE"].fillna(0)

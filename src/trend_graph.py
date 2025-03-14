@@ -2,15 +2,20 @@
 # author: Danish Karlin Isa
 # date: 2025-02-26
 
+import os
 import pandas as pd
 import altair as alt
+
+if "RENDER" in os.environ:
+    from src.data import *
+else:
+    from data import *
 
 # Disable vegafusion to ensure JSON serialization works correctly
 alt.data_transformers.disable_max_rows()
 
 def create_trend_graph(geo_filter='Canada', category='All sections'):
-    DATA_FROM = "data/clean/clean.csv"
-    data = pd.read_csv(DATA_FROM)
+    data = df.copy()
 
     x_axis = alt.X('YEAR:O', title="Year", axis=alt.Axis(labelAngle=-45))
     y_axis = alt.Y('VALUE', title="Value (CA$)",
