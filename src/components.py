@@ -62,6 +62,14 @@ sidebar = dbc.Col([
         "textOverflow": "ellipsis",
     }
     ),
+
+    html.Div(
+        dbc.Button('Reset selection', 
+                   color="secondary",
+                   id='reset-button', 
+                   n_clicks=0)
+    ),
+
     html.Hr(style={"border-top": "1px solid white"}),
     html.P(
         "This Dash application provides an interactive dashboard for visualizing trade relations between Canada and the US",
