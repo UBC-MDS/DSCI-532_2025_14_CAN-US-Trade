@@ -25,8 +25,8 @@ def create_trend_graph(geo_filter='Canada', category='All sections'):
     color = alt.Color('TRADE', legend=None)
     color_condition = alt.condition(
         alt.datum.VALUE < 0,
-        alt.value('red'),  # Color if condition is true
-        alt.value('green')  # Color if condition is false
+        alt.value('#d62728'),
+        alt.value('#2ca02c')
     )
 
     bar_graph = alt.Chart(data).mark_bar(cursor="pointer").encode(
@@ -52,8 +52,8 @@ def create_trend_graph(geo_filter='Canada', category='All sections'):
 
     final_chart = alt.layer(
         bar_graph,
-        trendline.mark_line(color='yellow'),
-        trendline.mark_circle(size=100, color='yellow', opacity=1)
+        trendline.mark_line(color='black'),
+        trendline.mark_circle(size=100, color='black', opacity=1)
     ).properties(
         width='container',
         height=160
