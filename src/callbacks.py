@@ -79,3 +79,22 @@ def update_trend_graph(selected_province, selected_category):
         return trend_chart.to_html()
     except Exception:
         return "<h3>Error: Failed to load trend graph. Check logs.</h3>"
+
+# Callback to reset to defaults
+@callback(
+    Output("province-dropdown", "value"),
+    Output("year-dropdown", "value"),
+    Output("trade-type-dropdown", "value"),
+    Output("goods-dropdown", "value"),
+    Output("reset-button", "n_clicks"),
+    Input("reset-button", "n_clicks")
+)
+def reset_dropdown_selection(clicks):
+    if clicks > 0:
+        return (
+            DEFAULT_PROVINCE, 
+            DEFAULT_YEAR, 
+            DEFAULT_TRADE, 
+            DEFAULT_GOODS,
+            DEFAULT_N_CLICKS
+        )
