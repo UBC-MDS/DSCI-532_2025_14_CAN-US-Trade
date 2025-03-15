@@ -23,5 +23,6 @@ dependencies:
     - gunicorn  # Needed for Render deployment
     - pip
     - pyarrow
+    - flask-caching
     - pip:
         - dash-vega-components

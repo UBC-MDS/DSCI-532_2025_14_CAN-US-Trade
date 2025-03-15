@@ -9,3 +9,4 @@ geopandas==0.14.*
 pyproj==3.6.*
 requests==2.31.*
 pyarrow==19.0.*
+flask-caching==2.3.*
