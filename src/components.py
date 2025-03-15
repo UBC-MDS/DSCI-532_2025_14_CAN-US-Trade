@@ -103,7 +103,7 @@ summary_container = dbc.Col([
 trade_composition = dbc.Col([
     html.H4("Trade Composition Figure", className="text-center"),
 #   html.Div(id="placeholder-1", style={"width": "100%", "height": "600px"}),
-    html.Div(id="placeholder-1", style={"width": "100%", "height": "auto", "min-height": "200px", "overflow": "hidden"})
+    html.Div(id="placeholder-1", style={"width": "90%", "height": "auto", "min-height": "200px", "overflow": "hidden"})
     ], width=6
 )
 
