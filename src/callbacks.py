@@ -95,7 +95,6 @@ def update_trend_graph(selected_province, selected_category):
     Output("reset-button", "n_clicks"),
     Input("reset-button", "n_clicks")
 )
-@cache.memoize()
 def reset_dropdown_selection(clicks):
     if clicks > 0:
         return (
