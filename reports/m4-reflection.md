@@ -46,17 +46,25 @@ from data import *
 
 ## App refinement
 
-text here
+Most of the refinements done is covered under addressing feedback:
+
+- Using a more muted tone of green and red for the trade values graph to improve readability/visibility
+- Allocating discrete colour categories for trade composition figure
+- Fixed text wrapping issue for dropdown filters (long text previously wrapped around and overlapped the options below it such that the options below were covered)
+- Ensured all figures are self-contained and displayed fully within their own container
 
 ## Our current dashboard
 
 What is good:
 
-- test
+- We have implemented the dashboard as per our proposal.
+- Our dashboard is functional and presentable.
+- The newly added reset button makes it easier to go back to default values.
+- The performance of our dashboard is better (faster loading of figures) due to the use of caching.
 
 Limitations of our dashboard:
 
-- test
+- We could still do better to harmonise the aesthetics of the dashboard.
 
 Future improvements:
 
