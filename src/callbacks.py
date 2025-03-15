@@ -4,8 +4,7 @@
 
 import os
 from dash import Output, Input, callback, html, dcc
-
-from data import *
+from flask_caching import Cache
 
 # Import necessary modules
 if "RENDER" in os.environ:
@@ -14,12 +13,14 @@ if "RENDER" in os.environ:
     from src.trend_graph import create_trend_graph
     from src.composition_figure import create_composition_figure
     from src.data import *
+    from src.cache import cache
 else:
     from trade_map import create_trade_map
     from summary import create_summary_component
     from trend_graph import create_trend_graph
     from composition_figure import create_composition_figure
     from data import *
+    from cache import cache
 
 # Callback to update the trade map
 @callback(
@@ -29,6 +30,7 @@ else:
     Input("trade-type-dropdown", "value"),
     Input("goods-dropdown", "value")
 )
+@cache.memoize()
 def update_trade_map(selected_year, selected_province, selected_trade, selected_category):
     try:
         trade_chart = create_trade_map(
@@ -46,6 +48,8 @@ def update_trade_map(selected_year, selected_province, selected_trade, selected_
     Input("province-dropdown", "value"),
     Input("goods-dropdown", "value")
 )
+@cache.memoize()
+
 def update_summary(selected_year, selected_province, selected_category):
     return create_summary_component(year=selected_year, geo_filter=selected_province, category=selected_category)
 
@@ -56,6 +60,7 @@ def update_summary(selected_year, selected_province, selected_category):
     Input("province-dropdown", "value"),
     Input("trade-type-dropdown", "value")
 )
+@cache.memoize()
 def update_composition_figure(selected_year, selected_province, selected_trade):
     try:
         composition_chart = create_composition_figure(
@@ -73,6 +78,7 @@ def update_composition_figure(selected_year, selected_province, selected_trade):
     Input("province-dropdown", "value"),
     Input("goods-dropdown", "value")
 )
+@cache.memoize()
 def update_trend_graph(selected_province, selected_category):
     try:
         trend_chart = create_trend_graph(geo_filter=selected_province, category=selected_category)
