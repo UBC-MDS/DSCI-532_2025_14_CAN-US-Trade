@@ -81,7 +81,7 @@ sidebar = dbc.Col([
         html.A("GitHub Link", href="https://github.com/UBC-MDS/DSCI-532_2025_14_CAN-US-Trade", target="_blank", style={"color": "lightblue"})
         ], className="text-center"),
     html.P(
-        "Last Updated: March 6, 2025", className="text-center", style={"color": TEXT_COLOR}),
+        "Last Updated: March 14, 2025", className="text-center", style={"color": TEXT_COLOR}),
     ], width=2, className="p-3", 
     style={"height": "100vh", "overflow-y": "auto", "background-color": SIDEBAR_BG_COLOR}
 )
