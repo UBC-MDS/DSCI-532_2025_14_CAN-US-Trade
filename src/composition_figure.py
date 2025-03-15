@@ -1,6 +1,6 @@
-# # file: composition_figure.py
-# # author: Danish Karlin Isa
-# # date: 2025-02-28
+# file: composition_figure.py
+# author: Danish Karlin Isa
+# date: 2025-02-28
 
 import os
 import pandas as pd
@@ -26,20 +26,20 @@ def create_composition_figure(year_filter=2024, geo_filter='Canada', trade_filte
     filtered_data["VALUE"] = filtered_data["VALUE"].abs()  # Convert negative numbers to positive
     filtered_data["VALUE_LABEL"] = filtered_data["VALUE"].map("${:,.0f}".format)
 
-    # Create treemap
+    # Create treemap with distinct colors per category
     fig = px.treemap(
         filtered_data, 
         path=[px.Constant("Total"), 'CATEGORY'],  # Group by category
         values='VALUE',  # Size of rectangles based on trade value
-        color='VALUE',  # Color by value
-        color_continuous_scale='sunset'  # Color gradient
+        color='CATEGORY',  # Distinct colors based on category
+        color_discrete_sequence=px.colors.qualitative.Safe  # Use predefined distinct colors
     )
 
     fig.update_traces(
         textinfo="label+percent entry",  # Show both label and value
         hoverinfo="label+value",  # Show value only on hover
         textfont=dict(size=15),  # Increase font size
-        texttemplate="%{label}<br>%{percentEntry:.1%}", # Show category + percentage
+        texttemplate="%{label}<br>%{percentEntry:.1%}",  # Show category + percentage
         customdata=filtered_data["VALUE_LABEL"],  # Use formatted values
 
         hovertemplate="<b>%{label}</b><br>" +  
@@ -49,11 +49,11 @@ def create_composition_figure(year_filter=2024, geo_filter='Canada', trade_filte
 
     fig.update_layout(
         showlegend=False,  # Hide the legend
-        coloraxis_showscale=False, # Hide legends
-        autosize=True,  # Let it adjust automatically
-        width=700,  # Reduce width
-        height=320,  # Reduce height to prevent cutoff
-        margin=dict(t=0, l=0, r=0, b=0),  # Reduce extra margins
+        coloraxis_showscale=False,  # Hide color scale
+        autosize=True,
+#        width=700,
+        height=250,
+        margin=dict(t=0, l=0, r=0, b=0),
     )
 
     return fig
