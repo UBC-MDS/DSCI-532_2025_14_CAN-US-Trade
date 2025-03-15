@@ -28,7 +28,12 @@ else:
     from cache import cache
 
 # Initialize Dash app with Bootstrap for styling
-app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = Dash(
+    __name__, 
+    external_stylesheets=[dbc.themes.BOOTSTRAP],
+    title="CAN-US Trade Relations",  # Set the Tab Title
+    assets_folder="../assets"  # Ensure Dash loads the favicon from assets
+)
 server = app.server  # Required for deployment
 
 cache.init_app(server)
