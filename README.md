@@ -1,89 +1,115 @@
 # Canada-U.S. Trade Relations Dashboard
 
-Welcome to the Canada-U.S. Trade Relations Dashboard repository!
+Welcome to the **Canada-U.S. Trade Relations Dashboard** repository!  
+This interactive dashboard provides **data-driven insights into the trade relationship between Canada and the U.S.**, helping users analyze trade trends, net trade balances, and industry-specific impacts.
 
-![Our dashboard!](img/demo.gif)
+![Dashboard Preview](img/demo.gif)  
 
-## About our dashboard
+---
 
-### The problem
+## **🌍 Live Dashboard**
 
-In January 2025, the Trump administration of the United States sought to impose a flat 25% tariff on nearly all imported goods from Canada due to grievances with border control. With the United States being Canada's top trading partner by export value, this announcement sent shock waves throughout Canada and the US, with government officials and economists sounding alarm bells on its potentially devastating impact on the economies on both sides of the border.
+You can access the deployed version of the dashboard here:  
+➡️ **[CAN-US Trade Relations Dashboard](https://dsci-532-2025-14-can-us-trade.onrender.com/)**
 
-Due to the severity of this situation, economic analysts in Canada must quickly assess industries and provinces will be most affected, the magnitude of trade reductions, and the long-term economic impact. However, trade data is often complex and hard to interpret, making it difficult to derive practical insights efficiently.
+---
 
-### Our solution
+## **📌 The Problem**
 
-Our goal is to develop an interactive dashboard that visualizes trade relations between Canada and the United States. The informative dashboard will help economic analysts by making trade data more interpretable with interactive figures. This will allow them to explore historical trade trends and assess vulnerabilities so that more time can be devoted to implementing measures to mitigate the impact of the tariffs on the Canadian economy.
+In January 2025, the **United States proposed a 25% tariff on nearly all Canadian imports**, citing concerns over trade imbalances. Given that the **U.S. is Canada’s largest trading partner**, this policy change could have significant economic consequences.  
+Canadian analysts need to **assess industry vulnerabilities, measure potential trade reductions, and anticipate economic impacts** efficiently.  
 
-Aside from economic analysts, our interactive dashboard will also make trade data more accessible for anyone who is interested in learning more about Canada's economic relationship with the US.
+However, **raw trade data is complex** and difficult to interpret quickly. Decision-makers require an **intuitive tool** to analyze trends and take informed action.
 
-## About us
+---
 
-This dashbaord is developed by Danish Karlin Isa, Elshaday Yoseph and Wangkai Zhu, who are Master of Data Science students at the University of British Columbia.
+## **✅ Our Solution: Interactive Trade Dashboard**
 
-This project is part of the coursework for DSCI 532 Data Visualization II, a course of the Master of Data Science program at the University of British Columbia.
+To address this, we built an **interactive dashboard** that:  
+✔ **Visualizes historical trade data** for Canada and the U.S.  
+✔ **Breaks down net trade balance** by industry and region.  
+✔ **Allows filtering by year, province, and trade type.**  
+✔ **Presents clear insights** for economists, policymakers, and the general public.  
 
-## Facing a issue with our dashboard?
+---
 
-We'd love to know! Please create a new Issue under the Issues tab, and we will get back to you as soon as possible.
+## **👨‍💻 About the Developers**
 
-## Interested in contributing to this dashboard?
+This dashboard is developed by **Danish Karlin Isa, Elshaday Yoseph, and Wangkai Zhu**, Master of Data Science (MDS) students at the **University of British Columbia (UBC)**.  
 
-Thank you for your interest! You can find:
+This project is part of **DSCI 532 – Data Visualization II**, a core course in the UBC MDS program.
 
--   instructions on how to get our dashboard on your computer below,
--   instructions on how to submit your contributions to us below, and
--   information regarding contributing to this dashboard in [CONTRIBUTING.md](https://github.com/UBC-MDS/DSCI-532_2025_14_CAN-US-Trade/blob/main/CONTRIBUTING.md).
+---
 
-### Developer notes
+## **📢 Facing Issues?**  
 
-#### Dependencies
+We’d love to hear your feedback! 🚀  
+If you encounter a bug or have suggestions for improvement, **please create a new Issue** under the Issues tab, and we’ll address it promptly.
 
--   Python 3.11.11 or later,
--   Conda 24.11.3 or later, and
--   All packages found in `environment.yaml`.
+---
 
-#### Running our dashboard locally on your computer
+## **🛠 Installation & Running the Dashboard Locally**
 
-1.  Clone this GitHub repository.
+Follow these steps to **set up and run the dashboard on your local machine**.
 
-2.  Install our `conda` environment by running the following command-line command:
+### **🔹 Prerequisites**
+Before running the dashboard, ensure you have the following installed:
+- Python **3.11.11** or later  
+- Conda **24.11.3** or later  
+- Required dependencies listed in `environment.yaml`
 
-```{bash}
-conda env create -f environment.yml
+---
+
+### **🔹 Steps to Run the Dashboard Locally**
+1️⃣ **Clone this GitHub repository**  
+```bash
+git clone https://github.com/UBC-MDS/DSCI-532_2025_14_CAN-US-Trade.git
+cd DSCI-532_2025_14_CAN-US-Trade
 ```
 
-3.  Activate our `conda` environment by running the following command-line command:
-
-```{bash}
+2️⃣ **Set up the Conda environment**  
+```bash
+conda env create -f environment.yml
 conda activate 532
 ```
 
-4.  Using a command-line interface, navigate to the root directory of the cloned repository and run the folling command-line command:
-
-```{bash}
+3️⃣ **Run the dashboard**  
+```bash
 python src/app.py
 ```
 
-5.  Take note of the link shown in the terminal output (example shown below) and navigate to that link using any Web browser on the same computer.
+4️⃣ **Access the dashboard**  
+- Once the server starts, look for an output like this in your terminal:
+  ```
+  Dash is running on http://127.0.0.1:8050/
+  ```
+- Open the link in your **web browser** to view the dashboard.
 
-![Terminal output](img/terminal_output.png)
+![Terminal Output](img/terminal_output.png)  
 
-#### Contributing to our dashboard
+---
 
-We always welcome new ideas! Here's how you can contribute to our dashboard:
+## **🛠 Contributing to the Dashboard**
 
-1.  Clone this dashboard into your computer using the instructions above.
+We **welcome contributions!** Here’s how you can contribute:
 
-2.  Create a new branch and make your changes.
+1. **Clone the repository** using the steps above.  
+2. **Create a new branch** and implement your changes.  
+3. **Push your branch** and submit a **Pull Request (PR)**.  
+4. Our team will review your improvements, and once approved, we’ll merge them!
 
-3.  Once it's looking good, push your branch to remote and create a Pull Request.
+For more details, see our [CONTRIBUTING.md](https://github.com/UBC-MDS/DSCI-532_2025_14_CAN-US-Trade/blob/main/CONTRIBUTING.md).
 
-4.  We will review your improvements using through the Pull Request. Once accepted, we will merge your changes into our dashboard!
+---
 
-## License
+## **📜 License & Data Source**
 
-The dataset used in our dashboard is obtained from Statistics Canada (StatCan). It is licensed under the [Statistics Canada Open License](https://www.statcan.gc.ca/en/reference/licence), where there are no restrictions on the use of the dataset for sharing or redistribution for both commercial and non-commercial purposes, provided that the appropriate credit is given.
+### **📊 Dataset**
+The dataset used in this dashboard is obtained from **Statistics Canada (StatCan)** and is licensed under the [Statistics Canada Open License](https://www.statcan.gc.ca/en/reference/licence).  
+✔ You may use, share, or redistribute the dataset for **both commercial and non-commercial purposes**, provided that proper credit is given.
 
-The software code contained within this repository is licensed under the MIT license. See the [LICENSE](https://github.com/UBC-MDS/DSCI-532_2025_14_CAN-US-Trade/blob/main/LICENSE) file for more information.
+### **📜 Software License**
+The source code is licensed under the **MIT License**.  
+See the [LICENSE](https://github.com/UBC-MDS/DSCI-532_2025_14_CAN-US-Trade/blob/main/LICENSE) file for more details.
+
+---
