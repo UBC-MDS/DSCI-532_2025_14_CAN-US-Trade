@@ -7,6 +7,8 @@ import os
 from dash import Dash
 import dash_bootstrap_components as dbc
 
+from flask_caching import Cache
+
 # Import necessary modules
 if "RENDER" in os.environ:
     from src import callbacks
@@ -15,6 +17,7 @@ if "RENDER" in os.environ:
         trade_trend, sidebar
     )
     from src.data import *
+    from src.cache import cache
 else:
     import callbacks
     from components import (
@@ -22,10 +25,13 @@ else:
         trade_trend, sidebar
     )
     from data import *
+    from cache import cache
 
 # Initialize Dash app with Bootstrap for styling
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server  # Required for deployment
+
+cache.init_app(server)
 
 # Define App Layout
 app.layout = dbc.Container(fluid=True, style={"height": "100vh", "overflow": "hidden", "background-color": "#f8f9fa"}, children=[
