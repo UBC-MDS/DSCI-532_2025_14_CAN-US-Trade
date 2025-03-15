@@ -7,6 +7,14 @@ import geopandas as gpd
 
 # Download data
 try:
+    df = pd.read_parquet("data/clean/clean.parquet")
+
+    expected_colnames = ['YEAR', 'GEO', 'CATEGORY', 'TRADE', 'VALUE']
+
+    if df.columns.to_list() != expected_colnames:
+        raise RuntimeError("clean.parquet is corrupted.")
+
+except:
     url = "https://www150.statcan.gc.ca/t1/tbl1/en/dtl!downloadDbLoadingData.action?pid=1210017301&latestN=0&startDate=20140101&endDate=20240101&csvLocale=en&selectedMembers=%5B%5B%5D%2C%5B243%5D%2C%5B%5D%2C%5B%5D%5D&checkedLevels=0D1%2C0D2%2C2D1%2C2D2%2C3D1"
 
     raw_data = pd.read_csv(url)
@@ -51,11 +59,7 @@ try:
     )
 
     df.to_csv("data/clean/clean.csv", index=False)
-
-except:
-    # Load and process cleaned trade data
-    CLEAN_DATA_PATH = "data/clean/clean.csv"
-    df = pd.read_csv(CLEAN_DATA_PATH)
+    df.to_parquet("data/clean/clean.parquet", index=False)
 
 # Extract unique values for dropdown options
 unique_years = sorted(df["YEAR"].unique(), reverse=True)
@@ -71,15 +75,21 @@ TEXT_COLOR = "black"
 
 # province data
 try:
+    canadian_provinces = gpd.read_parquet('data/clean/canadian_provinces.parquet')
+
+    expected_colnames = ['name', 'geometry']
+
+    if canadian_provinces.columns.to_list() != expected_colnames:
+        raise RuntimeError('canadian_provinces.parquet is corrupted.')
+    
+except:
     GEOJSON_URL = "https://naciscdn.org/naturalearth/50m/cultural/ne_50m_admin_1_states_provinces.zip"
     provinces = gpd.read_file(GEOJSON_URL)
     provinces.to_file('data/raw/provinces.shp')
 
-    canadian_provinces = provinces[provinces["iso_a2"] == "CA"]
+    canadian_provinces = provinces[provinces["iso_a2"] == "CA"][['name', 'geometry']]
     canadian_provinces.to_file('data/clean/canadian_provinces.shp')
-
-except:
-    canadian_provinces = gpd.read_file('data/clean/canadian_provinces.shp')
+    canadian_provinces.to_parquet('data/clean/canadian_provinces.parquet')
 
 # Default selections
 DEFAULT_PROVINCE = "Canada"
