@@ -51,7 +51,7 @@ def create_composition_figure(year_filter=2024, geo_filter='Canada', trade_filte
         showlegend=False,  # Hide the legend
         coloraxis_showscale=False,  # Hide color scale
         autosize=True,
-        width=700,
+#        width=700,
         height=250,
         margin=dict(t=0, l=0, r=0, b=0),
     )
